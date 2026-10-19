@@ -1,0 +1,1102 @@
+<!doctype html>
+<!--
+=====================================================================
+CONTENT ISSUES (những điểm cần giáo viên xem lại — không sửa âm thầm)
+=====================================================================
+1. Phần TARGET GRAMMAR được dán HAI LẦN (toàn bộ bài từ ##LESSON đến ##REVIEW lặp lại y hệt). Trang chỉ dùng một bản.
+2. "Thành phần tô màu" chỉ có S, AUX, V, O nhưng dữ liệu còn dùng B (If/if) và T (từ chỉ thời gian).
+   Trang thêm B = "Liên từ if" và T = "Thời gian" vào chú thích màu.
+3. Loại 2, Ví dụ 2: "full" được gắn nhãn T ("[T: full?]") nhưng đây là tính từ (bổ ngữ), không phải từ chỉ thời gian.
+   Trang hiển thị "full" theo màu O (tân ngữ / bổ ngữ).
+4. Phần COMPARE ghi "Loại 1: Second Conditional | Câu điều kiện loại 2" và "Loại 2: Third Conditional | Câu điều kiện loại 3".
+   Số "Loại 1/Loại 2" trùng với tên loại câu điều kiện, rất dễ nhầm. Trang chỉ ghi "Câu điều kiện loại 2" và "Câu điều kiện loại 3".
+5. "Dấu hiệu nhận biết" của loại 2 gồm mô tả (an imaginary situation, not true now, unlikely, If + V2, were for all subjects, no past time word),
+   chỉ "If I were you" là cụm có trong câu. Trang tách thành "dấu hiệu" và "gợi ý"; tương tự với loại 3 (a regret about the past…).
+6. Cách dùng 2 của loại 2 ("việc khó xảy ra trong tương lai") không có ví dụ hay bài tập nào. Cách dùng 3 ("If I were you") chỉ có ở câu Ôn tập 6;
+   trang thêm một khung minh họa "If I were you, I would take the train" ở bước Xem câu biến đổi.
+7. Ghi chú REVIEW yêu cầu viết dạng đầy đủ, không viết tắt. Theo yêu cầu của prompt (5.4), trang vẫn chấp nhận dạng viết tắt đúng
+   (hadn't left, would've gone) và dấu nháy cong (’). "If I was you" (văn nói) KHÔNG được chấp nhận, theo đúng quy tắc của bài (were).
+8. Nhân vật chính theo cài đặt là Nam, nhưng nội dung gốc dùng nhiều tên (Minh, Lan, Tom, Mark, Mai, Ben, Hoang, Anna, Hai, Ly).
+   Giữ nguyên câu gốc; câu do AI thêm dùng Nam (he/his/him).
+9. Danh sách từ vựng (Section 4) yêu cầu AI tự đề xuất. Trang dùng 10 từ trong bài + 31 từ, cụm động từ và collocation về du lịch và giao thông
+   (A2–B1) do AI đề xuất, có "passport", "tour", "tour guide" vốn đã xuất hiện trong câu của bài. IPA theo giọng Anh – Anh.
+10. Ví dụ thêm, câu "Đoán", khung câu biến đổi, 4 câu phân loại, 2 câu trắc nghiệm thêm ở Ôn tập, câu ví dụ cho từng từ vựng và lời giải thích
+    cho từng phương án sai là nội dung mới do AI viết theo đúng quy tắc của bài.
+=====================================================================
+-->
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cut">
+<title>Câu điều kiện B · Unreal Conditionals</title>
+<style>
+:root{
+  --bg:#f3f5fa;--card:#fff;--ink:#1b2333;--mut:#5a6476;--line:#dce2ee;--soft:#eef2f9;
+  --acc:#2f56c9;--accInk:#fff;--ok:#157a3c;--okbg:#e5f5ea;--bad:#b9381a;--badbg:#fdece7;
+  --S:#1d4ed8;--AUX:#c2410c;--V:#15803d;--O:#7e22ce;--B:#be185d;--T:#475569;
+  --hlL:84%;--ptL:30%;--hlS:75%;
+  --shadow:0 1px 2px rgba(20,30,60,.06),0 4px 14px rgba(20,30,60,.06);
+  --scale:1;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --bg:#0e131c;--card:#171f2d;--ink:#e7ebf3;--mut:#9ca7ba;--line:#2a3447;--soft:#1f2939;
+  --acc:#7c9cff;--accInk:#0e131c;--ok:#4ade80;--okbg:#123222;--bad:#ff8a6b;--badbg:#3a1d16;
+  --S:#80a8ff;--AUX:#fb923c;--V:#4ade80;--O:#c99bff;--B:#f472b6;--T:#a9b6ca;
+  --hlL:30%;--ptL:70%;--hlS:45%;--shadow:none;color-scheme:dark;}}
+:root[data-theme=dark]{
+  --bg:#0e131c;--card:#171f2d;--ink:#e7ebf3;--mut:#9ca7ba;--line:#2a3447;--soft:#1f2939;
+  --acc:#7c9cff;--accInk:#0e131c;--ok:#4ade80;--okbg:#123222;--bad:#ff8a6b;--badbg:#3a1d16;
+  --S:#80a8ff;--AUX:#fb923c;--V:#4ade80;--O:#c99bff;--B:#f472b6;--T:#a9b6ca;
+  --hlL:30%;--ptL:70%;--hlS:45%;--shadow:none;color-scheme:dark;}
+*{box-sizing:border-box}
+html{font-size:calc(clamp(17px, 15.6px + .3vw, 20px) * var(--scale));-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.55;height:100dvh;overflow:hidden}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+#app{height:100dvh;display:flex;flex-direction:column}
+/* header */
+#hdr{flex:none;display:flex;align-items:center;gap:.4rem;padding:6px 10px;padding-top:max(6px,env(safe-area-inset-top));background:var(--card);border-bottom:1px solid var(--line);position:relative;min-height:52px}
+.ib{min-width:44px;height:44px;border:1px solid var(--line);background:var(--card);border-radius:12px;font-size:1.1rem;display:inline-flex;align-items:center;justify-content:center;padding:0 .5rem}
+.htitle{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.2}
+.htitle b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.95rem}
+.htitle span{font-size:.78rem;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#hTime{font-size:.78rem;color:var(--mut);white-space:nowrap}
+#prog{position:absolute;left:0;right:0;bottom:-1px;height:3px;background:transparent}
+#prog i{display:block;height:100%;width:0;background:var(--acc);transition:width .5s ease}
+/* main */
+#main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;outline:none}
+.screen{max-width:1180px;margin:0 auto;padding:14px 16px 28px;animation:enter .35s ease both}
+@keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.trow{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:.6rem;margin-bottom:.6rem}
+.trow>div:first-child{flex:1 1 210px;min-width:0}
+.trow .mini{margin-left:auto}
+.kick{margin:0;font-size:.8rem;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.03em}
+h1{font-size:1.45rem;line-height:1.25;margin:.1rem 0 0}
+h2{font-size:1.15rem;margin:0 0 .5rem}
+h3{font-size:1.02rem;margin:0 0 .45rem}
+p{margin:.35rem 0}
+.mut{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 14px;margin:0 0 12px;box-shadow:var(--shadow);min-width:0}
+.cols{display:block}
+@media (min-width:1024px){
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  .cols>.col{min-width:0}
+  .screen{padding:18px 28px 32px}
+}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:.05rem .45rem;border-radius:99px;background:var(--soft);color:var(--mut);vertical-align:middle}
+.new{background:#fde68a;color:#7c4a03}
+/* nav */
+#nav{flex:none;display:flex;gap:10px;padding:8px 12px;padding-bottom:max(8px,env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line)}
+#nav button{flex:1;min-height:50px;border-radius:14px;border:1px solid var(--line);background:var(--card);font-weight:600;font-size:1rem}
+#nav .pri,.pri{background:var(--acc);color:var(--accInk);border-color:var(--acc)}
+#nav button:disabled{opacity:.4}
+@media (min-width:1024px){#nav{justify-content:space-between}#nav button{flex:0 0 220px}}
+@media (max-height:480px) and (orientation:landscape){
+  #hdr{min-height:44px;padding:3px 10px}.ib{height:38px;min-width:40px}
+  #nav{padding:5px 12px}#nav button{min-height:40px}
+  h1{font-size:1.2rem}
+}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.35rem;min-height:46px;padding:.45rem 1rem;border-radius:12px;border:1px solid var(--line);background:var(--card);font-weight:600}
+.btn.pri{background:var(--acc);color:var(--accInk);border-color:var(--acc)}
+.btn.wide{width:100%}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+/* sentences */
+.en{font-family:inherit}
+.sent{font-size:1.22rem;line-height:1.75;margin:.1rem 0}
+.ck{display:inline-block;margin:0 .28em .1em 0;font-weight:650;white-space:normal}
+.r-S{color:var(--S)}.r-AUX{color:var(--AUX)}.r-V{color:var(--V)}.r-O{color:var(--O)}.r-B{color:var(--B)}
+.r-T{color:var(--T);text-decoration:underline dashed 1.5px;text-underline-offset:4px}
+.r-X{color:var(--bad);text-decoration:line-through wavy 2px}
+mark.hl{background:hsl(var(--h) var(--hlS) var(--hlL));color:inherit;border-radius:.3em;padding:0 .12em;box-shadow:inset 0 -2px 0 hsl(var(--h) 60% 45%)}
+mark.sig{background:transparent;color:inherit;outline:2px solid hsl(var(--h) 55% 50%);outline-offset:1px;border-radius:.3em;padding:0 .1em}
+.vw{text-decoration:underline dotted 2px;text-underline-offset:5px;cursor:pointer;border-radius:4px}
+.vw:hover{background:var(--soft)}
+.blank{display:inline-block;min-width:3.2em;border-bottom:2px solid var(--mut);margin:0 .15em}
+.sc{border-left:4px solid hsl(var(--h,220) 55% 55%);padding:.25rem 0 .35rem .75rem;margin:.6rem 0}
+.scb{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:.15rem}
+.spk{min-width:44px;min-height:40px;border-radius:10px;border:1px solid var(--line);background:var(--soft);font-size:1rem}
+.spk.on{background:var(--acc);color:var(--accInk)}
+.vbtn{min-height:40px;border-radius:10px;border:1px dashed var(--line);background:transparent;padding:0 .8rem;font-size:.9rem;color:var(--mut)}
+.vi{background:var(--soft);border-radius:10px;padding:.35rem .6rem;margin:.35rem 0 0;font-size:.95rem;width:100%}
+/* legend */
+details.leg{margin:0 0 .6rem}
+details.leg summary{cursor:pointer;font-size:.88rem;color:var(--mut);min-height:40px;display:flex;align-items:center;gap:.4rem;list-style:none}
+details.leg summary::-webkit-details-marker{display:none}
+details.leg summary::before{content:"▸";transition:transform .2s}
+details.leg[open] summary::before{transform:rotate(90deg)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:.25rem;border:1.5px solid currentColor;border-radius:99px;padding:.05rem .55rem;font-size:.85rem;font-weight:650;background:var(--card)}
+.legx{font-size:.88rem;color:var(--mut);margin:.4rem 0 0}
+/* mini map */
+.mini{flex:none;display:grid;gap:3px;padding:5px;border:1px solid var(--line);border-radius:10px;background:var(--card);font-size:.62rem;line-height:1.2}
+.mrow{display:grid;grid-template-columns:auto 1fr 1fr;gap:3px;opacity:.38;transition:opacity .3s}
+.mrow.on{opacity:1}
+.mlab{font-weight:700;color:hsl(var(--h) 60% var(--ptL));padding:2px 3px;white-space:nowrap}
+.mcell{background:hsl(var(--h) var(--hlS) var(--hlL));border-radius:4px;padding:2px 4px;text-align:center;white-space:nowrap;font-weight:600}
+.mrow.on .mcell{box-shadow:inset 0 0 0 1.5px hsl(var(--h) 60% 45%)}
+/* formula */
+.fm{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin:.3rem 0 .6rem}
+.fm .fl{width:100%;font-size:.82rem;color:var(--mut);font-weight:600}
+.fc{border-radius:8px;padding:.1rem .45rem;font-weight:700;font-size:.95rem;border:1.5px solid var(--line);background:var(--card)}
+.fc.S{color:var(--S);border-color:var(--S)}.fc.V{color:var(--V);border-color:var(--V)}.fc.AUX{color:var(--AUX);border-color:var(--AUX)}.fc.B{color:var(--B);border-color:var(--B)}
+.fp{color:var(--mut);font-weight:700}
+.fcm{font-weight:900;font-size:1.1rem;padding:0 .1rem}
+/* clause diagram */
+.cl{display:flex;flex-direction:column;gap:6px;align-items:stretch;margin:.4rem 0}
+.clb{border-radius:12px;padding:.5rem .7rem;border:2px solid hsl(var(--h) 55% 50%);background:hsl(var(--h) var(--hlS) var(--hlL) / .45)}
+.clb small{display:block;color:var(--mut);font-weight:600;font-size:.78rem}
+.clb b{font-size:1.05rem}
+.cla{text-align:center;font-size:1.3rem;color:var(--mut);line-height:1}
+@media (min-width:560px){.cl{flex-direction:row;align-items:center}.clb{flex:1}.cla{transform:none}}
+/* timeline */
+.tl{width:100%;height:auto;display:block;margin:.2rem 0}
+.tl text{font-family:inherit;fill:var(--mut);font-weight:700}
+.tl .ax{stroke:var(--mut);stroke-width:2.5}
+/* lists */
+ul.clean{margin:.3rem 0;padding-left:1.2rem}
+ul.clean li{margin:.25rem 0}
+.gold{border-radius:12px;padding:.6rem .75rem;background:hsl(var(--h) var(--hlS) var(--hlL) / .5);border:1px solid hsl(var(--h) 55% 55%)}
+/* options / quiz */
+.opt{display:flex;align-items:flex-start;gap:.6rem;width:100%;text-align:left;min-height:50px;padding:.6rem .75rem;margin:.4rem 0;border-radius:12px;border:1.5px solid var(--line);background:var(--card);font-size:1.05rem;transition:transform .15s,border-color .2s,background .2s}
+.opt .lt{flex:none;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--soft);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}
+.opt:active{transform:scale(.99)}
+.opt.ok{border-color:var(--ok);background:var(--okbg)}
+.opt.no{border-color:var(--bad);background:var(--badbg)}
+.opt.ok .lt::before{content:"✓"}.opt.no .lt::before{content:"✗"}
+.opt.ok .lt,.opt.no .lt{font-size:0}
+.opt.ok .lt::before,.opt.no .lt::before{font-size:.95rem}
+.opt[disabled]{cursor:default}
+.opt.dim{opacity:.6}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.3rem}
+.qdots{display:flex;flex-wrap:wrap;gap:6px}
+.qd{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);font-size:.75rem;font-weight:700;padding:0}
+.qd.ok{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
+.qd.no{background:var(--badbg);border-color:var(--bad);color:var(--bad)}
+.qd.cur{outline:2.5px solid var(--acc);outline-offset:1px}
+.qstem{font-size:1.18rem;line-height:1.7;margin:.3rem 0 .5rem}
+.fb{border-radius:12px;padding:.6rem .75rem;margin:.5rem 0;animation:enter .3s ease both}
+.fb.ok{background:var(--okbg);border:1px solid var(--ok)}
+.fb.no{background:var(--badbg);border:1px solid var(--bad)}
+.fb b.h{display:block;margin-bottom:.2rem}
+.fb em{font-style:normal;font-weight:700}
+.qnav{display:flex;gap:8px;flex-wrap:wrap;margin-top:.6rem}
+.qnav .btn{flex:1;min-width:130px}
+.gin{width:100%;min-height:50px;font-size:1.05rem;padding:.5rem .7rem;border-radius:12px;border:1.5px solid var(--line);background:var(--card)}
+.gin.ok{border-color:var(--ok)}.gin.no{border-color:var(--bad)}
+.shake{animation:shake .35s}
+@keyframes shake{0%,100%{transform:none}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pop{animation:pop .45s}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.04)}100%{transform:scale(1)}}
+.qsum{border-radius:12px;padding:.7rem;background:var(--soft);margin-top:.6rem}
+/* spot mistake */
+.tok{display:inline-block;min-height:42px;padding:.2rem .45rem;margin:.15rem .1rem;border-radius:10px;border:1.5px solid var(--line);background:var(--card);font-size:1.12rem}
+.tok.hit{border-color:var(--bad);background:var(--badbg);color:var(--bad);text-decoration:line-through}
+.tok.miss{animation:shake .35s;border-color:var(--mut)}
+.fix{color:var(--ok);font-weight:700}
+/* stage */
+.stage{position:relative;min-height:6.5rem;padding:.8rem .6rem;border-radius:14px;background:var(--soft);font-size:1.25rem;line-height:1.9;display:flex;flex-wrap:wrap;align-content:center}
+.stage .ck{margin:.1rem .32em .1rem 0;padding:.05rem .15rem;border-radius:6px}
+.stage .ck.chg{animation:flash 1s ease}
+@keyframes flash{0%{background:hsl(50 100% 60% / .9)}100%{background:transparent}}
+.cap{min-height:3rem;margin:.6rem 0;font-weight:600}
+.frd{display:flex;gap:6px;justify-content:center;margin:.3rem 0}
+.frd i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.frd i.on{background:var(--acc)}
+/* decision path */
+.dq{border-radius:14px;border:1.5px solid var(--line);padding:.7rem;margin:.5rem 0;animation:enter .3s both}
+.dres{border-radius:14px;padding:.7rem;border:2px solid hsl(var(--h) 55% 50%);background:hsl(var(--h) var(--hlS) var(--hlL) / .55);margin:.5rem 0;animation:pop .45s}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:.3rem 0 .6rem}
+.tab{min-height:44px;padding:.3rem .9rem;border-radius:99px;border:1.5px solid hsl(var(--h) 55% 50%);background:var(--card);font-weight:650}
+.tab.on{background:hsl(var(--h) var(--hlS) var(--hlL));}
+/* big picture grid */
+.bp{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px;align-items:stretch;margin:.4rem 0}
+.bp .h{font-size:.8rem;color:var(--mut);font-weight:700;align-self:end;text-align:center}
+.bp .rl{font-weight:800;color:hsl(var(--h) 60% var(--ptL));display:flex;align-items:center;padding-right:.3rem;font-size:.95rem}
+.bp .c{border-radius:10px;padding:.45rem .3rem;text-align:center;font-weight:700;background:hsl(var(--h) var(--hlS) var(--hlL));border:1.5px solid hsl(var(--h) 55% 50%);font-size:.98rem}
+/* vocab */
+.vchips{display:flex;flex-wrap:wrap;gap:8px}
+.vchip{min-height:42px;border-radius:99px;border:1.5px dotted var(--mut);background:var(--card);padding:.2rem .8rem;font-weight:600}
+.fcard{perspective:1200px;margin:.4rem 0}
+.fin{position:relative;min-height:15rem;transition:transform .5s;transform-style:preserve-3d}
+.fcard.flip .fin{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:18px;border:1.5px solid var(--line);background:var(--card);padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:var(--shadow)}
+.face.back{transform:rotateY(180deg);background:var(--soft)}
+.fw{font-size:1.7rem;font-weight:800;line-height:1.2}
+.fpos{color:var(--mut);font-style:italic}
+.fipa{color:var(--mut);margin:.2rem 0}
+.fvi{font-size:1.35rem;font-weight:700;margin-bottom:.4rem}
+.kn{color:var(--ok);font-weight:700}
+.bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ok);width:0;transition:width .4s}
+/* result */
+.rc{max-width:520px;margin:0 auto}
+.rt{width:100%;border-collapse:collapse;font-size:.92rem}
+.rt td{padding:.3rem .2rem;border-bottom:1px solid var(--line)}
+.rt td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+textarea{width:100%;min-height:5.5rem;border-radius:12px;border:1.5px solid var(--line);background:var(--card);padding:.5rem .6rem;font-size:1rem}
+.fld{display:block;font-size:.9rem;font-weight:600;margin:.6rem 0}
+.fld input{display:block;width:100%;margin-top:.3rem;min-height:48px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);padding:.4rem .7rem;font-size:1.05rem}
+/* cheat sheet */
+.cs-f{font-size:.95rem}
+/* overlays */
+.ov{position:fixed;inset:0;background:rgba(10,15,25,.45);z-index:20;display:flex}
+.ov[hidden]{display:none}
+.drawer{background:var(--card);width:min(86vw,360px);height:100%;overflow:auto;padding:12px;padding-top:max(12px,env(safe-area-inset-top));animation:slide .25s ease}
+@keyframes slide{from{transform:translateX(-100%)}to{transform:none}}
+.dg{font-size:.75rem;color:var(--mut);font-weight:700;text-transform:uppercase;margin:.8rem 0 .2rem}
+.di{display:flex;gap:.5rem;align-items:center;width:100%;text-align:left;min-height:44px;border:0;background:transparent;border-radius:10px;padding:.3rem .5rem}
+.di.cur{background:var(--soft);font-weight:700}
+.di .ck2{width:1.2rem;color:var(--ok);font-weight:800}
+.setp{margin:auto;background:var(--card);border-radius:18px;padding:16px;width:min(92vw,400px);max-height:90dvh;overflow:auto;animation:pop .3s}
+.setp label{display:block;font-weight:600;font-size:.9rem;margin:.6rem 0 .25rem}
+.setp select{width:100%;min-height:46px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);padding:0 .6rem}
+.seg{display:flex;gap:6px}.seg button{flex:1;min-height:44px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);font-weight:600}
+.seg button.on{background:var(--acc);color:var(--accInk);border-color:var(--acc)}
+#sheet{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom));width:min(94vw,460px);z-index:30;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.25);animation:up .25s ease}
+#sheet[hidden]{display:none}
+@keyframes up{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(80px + env(safe-area-inset-bottom));z-index:40;background:#1b2333;color:#fff;border-radius:12px;padding:.55rem .9rem;font-size:.9rem;max-width:92vw;opacity:0;pointer-events:none;transition:opacity .3s}
+#toast.on{opacity:1}
+.err{border:2px solid var(--bad);background:var(--badbg);border-radius:14px;padding:1rem;margin:1rem}
+.confetti{position:fixed;pointer-events:none;z-index:50;font-size:1.4rem;animation:fly 1s ease-out forwards}
+@keyframes fly{to{transform:translate(var(--dx),var(--dy)) rotate(200deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media print{
+  body{height:auto;overflow:visible;background:#fff}
+  #app{height:auto}#hdr,#nav,.noprint,.ov,#sheet,#toast{display:none!important}
+  #main{overflow:visible}.card{break-inside:avoid;box-shadow:none}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="hdr">
+    <button class="ib" id="bMenu" aria-label="Mở danh sách các bước">☰</button>
+    <div class="htitle"><b id="hTitle"></b><span id="hStep"></span></div>
+    <span id="hTime" aria-label="Thời gian đã học">⏱ 0:00</span>
+    <button class="ib" id="bSet" aria-label="Cài đặt">⚙︎</button>
+    <div id="prog" aria-hidden="true"><i></i></div>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <nav id="nav">
+    <button id="bPrev">← Trước</button>
+    <button id="bNext" class="pri">Tiếp →</button>
+  </nav>
+</div>
+<div class="ov" id="ovMenu" hidden><div class="drawer" role="dialog" aria-label="Danh sách các bước" id="drawer"></div></div>
+<div class="ov" id="ovSet" hidden><div class="setp" role="dialog" aria-label="Cài đặt" id="setp"></div></div>
+<div id="sheet" role="dialog" aria-label="Nghĩa của từ" hidden></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =====================================================================
+   DỮ LIỆU BÀI HỌC (giáo viên có thể sửa phần này, không cần sửa code)
+   ---------------------------------------------------------------------
+   Cách viết câu có tô màu (giống file in-class):
+     [S: we]            → Chủ ngữ (xanh dương)
+     [AUX: will]        → Trợ động từ (cam)
+     [V: walk]          → Động từ (xanh lá)
+     [O: the train]     → Tân ngữ / bổ ngữ (tím)
+     [T: always]        → Từ chỉ thời gian, tần suất (gạch dưới)
+     [B: If]            → Liên từ if (hồng)
+     [X: will]          → Phần SAI (gạch ngang đỏ) — chỉ dùng trong khung minh họa lỗi
+   Bên trong: {miss}           → dạng cần học, tô nền màu của điểm ngữ pháp
+              {{f|will}}       → tô nền màu của điểm ngữ pháp có id "f"
+              [[map|map]]      → đánh dấu từ vựng thủ công (từ vựng cũng được tự động nhận ra)
+   Khung câu biến đổi dùng thêm khóa: [S#s1: Nam] — cùng khóa thì chữ "bay" sang vị trí mới.
+   ===================================================================== */
+const LESSON = {
+  meta: {
+    titleVi: "Câu điều kiện – Phần B: điều kiện không có thật",
+    titleEn: "Conditional Sentences, Part B: Unreal Conditionals (Second and Third)",
+    short: "Câu điều kiện B · Second & Third",
+    theme: "du lịch và phương tiện giao thông (travel and transport)",
+    goal: "Sau bài học, bạn phân biệt được câu điều kiện loại 2 và loại 3, chia đúng động từ ở cả hai vế và không đặt would sau if.",
+    minutes: "35–45",
+    character: "Nam",
+    notesHint: "Ví dụ: Vì sao nói If I were, không nói If I was?"
+  },
+  /* Chú thích màu */
+  roles: { S: "Chủ ngữ", AUX: "Trợ động từ", V: "Động từ", O: "Tân ngữ / bổ ngữ", T: "Thời gian", B: "Liên từ if" },
+
+  /* Khởi động + tổng quan */
+  intro: {
+    whatWhen: "Bài này học hai loại câu \"nếu... thì...\" về điều không có thật. Loại 2 nói về điều chỉ là tưởng tượng ở bây giờ, việc khó xảy ra, hoặc dùng để khuyên. Loại 3 nói về việc đã không xảy ra trong quá khứ, thường để tiếc nuối. Ở cả hai loại, động từ lùi về quá khứ: loại 2 lùi một bước, loại 3 lùi hai bước.",
+    thinkQ: "Câu \"Nếu Lan đi taxi thì Lan đến sớm rồi\" có thể là tưởng tượng về hôm nay hoặc tiếc nuối về hôm qua. Tiếng Việt giữ nguyên động từ \"đi\", vậy tiếng Anh cho biết đó là lúc nào bằng cách nào?",
+    mainPoint: "Tiếng Anh cho biết loại câu ngay trên động từ: loại 2 dùng V2 (quá khứ đơn, như had, took) và would + V; loại 3 dùng had + V3 (như had taken) và would have + V3. Hãy tìm dấu hiệu: chỉ là tưởng tượng ở bây giờ, hay có từ chỉ quá khứ như yesterday, last night?"
+  },
+  /* Câu ngắn dưới bảng tổng thể và gợi ý ở bước Quan sát */
+  bigNote: "Cả hai loại đều nói về điều <b>không có thật</b>. Loại 2 lùi động từ <b>một bước</b> (V2 + would + V). Loại 3 lùi <b>hai bước</b> (had + V3 + would have + V3).",
+  obsHint: "Hãy để ý: câu nói về điều <b>tưởng tượng ở bây giờ</b> hay về <b>việc đã không xảy ra trong quá khứ</b>? Động từ ở vế if và vế chính có dạng gì?",
+  symLegend: "★ = hiện tại (bây giờ) · khung nét đứt = điều không có thật · mũi tên cong = động từ lùi về quá khứ · ○✗ = việc đã không xảy ra",
+
+  /* Các điểm ngữ pháp */
+  points: [
+    {
+      id: "s", hue: 262, tl: "imag",
+      nameVi: "Câu điều kiện loại 2", nameEn: "Second Conditional", short: "Loại 2",
+      mini: ["V2", "would V"],
+      formulas: [
+        ["Khẳng định", "If + S + V2, S + would + V"],
+        ["Phủ định", "If + S + did + not + V, S + would + not + V"],
+        ["Nghi vấn", "Would + S + V + if + S + V2?"]
+      ],
+      clause: ["V2", "would + V"],
+      uses: [
+        "Điều chỉ là tưởng tượng, không đúng với bây giờ.",
+        "Việc khó xảy ra trong tương lai.",
+        "Lời khuyên: If I were you, I would ..."
+      ],
+      signals: ["If I were you"],
+      hints: ["điều tưởng tượng (an imaginary situation)", "không đúng với bây giờ (not true now)", "khó xảy ra (unlikely)", "If + V2, would + V", "were cho mọi chủ ngữ", "không có từ chỉ quá khứ"],
+      golden: { en: "Not true now? Use a past verb after if, then would.", vi: "Việc không có thật ở bây giờ thì vế if dùng V2 (quá khứ đơn, như had, took), vế chính dùng would + động từ nguyên mẫu (như go, take). Với be, dùng were cho mọi chủ ngữ; không đặt would sau if." },
+      selfQ: "Việc này có đúng với bây giờ không, hay chỉ là tưởng tượng?",
+      timeline: "Nằm ở bây giờ và tương lai: sự thật bây giờ khác, nên động từ lùi một bước về quá khứ.",
+      examples: [
+        { s: "[B: {If}] [S: Minh] [V: {had}] [O: a car,] [S: he] [AUX: {would}] [V: {visit}] [O: his grandparents]", vi: "Nếu Minh có xe hơi (nhưng thực tế thì không), anh ấy sẽ đi thăm ông bà." },
+        { s: "[AUX: {Would}] [S: your friends] [V: {take}] [O: a taxi] [B: {if}] [S: the trains] [V: {were}] [O: full?]", vi: "Nếu tàu hết chỗ (chỉ là giả sử), các bạn của bạn có đi taxi không?" },
+        { s: "[B: {If}] [S: Nam] [V: {were}] [O: a tour guide,] [S: he] [AUX: {would}] [V: {show}] [O: tourists around Hanoi]", vi: "Nếu Nam là hướng dẫn viên du lịch (nhưng anh ấy không phải), anh ấy sẽ dẫn khách du lịch đi tham quan Hà Nội.", added: true }
+      ],
+      predict: {
+        q: "Ba câu đều nói về điều không có thật ở bây giờ. Động từ ở vế if có dạng gì?",
+        opts: ["Quá khứ đơn V2 (had, were), dù câu nói về bây giờ", "Hiện tại đơn (has, is)", "would + V (would have, would be)"],
+        a: 0,
+        expl: "Vế if dùng V2 (had, were) dù câu nói về bây giờ: động từ lùi một bước để cho biết \"không có thật\". Vế chính dùng would + V. Đó là câu điều kiện loại 2."
+      },
+      frames: [
+        { s: "[B#if: If] [S#s1: Nam] [V#v1: {had}] [O#o1: a car,] [S#s2: he] [AUX#a2: {would}] [V#v2: {drive}] [O#o2: to Da Lat]", cap: "Tưởng tượng (Nam không có xe): vế if dùng V2, vế chính dùng would + V." },
+        { s: "[B#if: If] [S#s1: Nam] [X#a1: would] [V#v1: have] [O#o1: a car,] [S#s2: he] [AUX#a2: would] [V#v2: drive] [O#o2: to Da Lat]", cap: "✗ Không đặt would sau if, dù tiếng Việt nói \"nếu… sẽ…\"." },
+        { s: "[AUX#a2: {Would}] [S#s2: Nam] [V#v2: {drive}] [O#o2: to Da Lat] [B#if: if] [S#s1: he] [V#v1: {had}] [O#o1: a car?]", cap: "Câu hỏi: Would + S + V + if + S + V2?" },
+        { s: "[B#if: If] [S#s1: I] [V#v1: {were}] [O#o1: you,] [S#s2: I] [AUX#a2: {would}] [V#v2: {take}] [O#o2: the train]", cap: "Lời khuyên: If I were you, I would… Với be, dùng were cho mọi chủ ngữ, kể cả I." }
+      ],
+      mistakes: [
+        { wrong: "If we would have more time, we would stay in Hoi An.", bad: [2, 3], fix: "had", right: "If we had more time, we would stay in Hoi An.", why: "Vế if dùng V2 (had), không dùng would; tiếng Việt nói \"sẽ\" ở cả hai vế nên người học dễ thêm would vào vế if." },
+        { wrong: "If my dad had a day off, he will take us to the beach.", bad: [8], fix: "would", right: "If my dad had a day off, he would take us to the beach.", why: "Loại 2 dùng would ở vế chính, không dùng will; will là của loại 1, khi việc có thể xảy ra thật." }
+      ],
+      questions: [
+        { q: "If Nam ______ a ticket, he would take the train.", opts: ["has", "will have", "had", "would have"], a: 2,
+          ex: "Nhìn vế chính *would take* → loại 2, việc tưởng tượng; vế if dùng quá khứ đơn: *have* thành *had*.",
+          why: { 0: "*has* là hiện tại (kiểu loại 1). *would take* cho biết đây là tưởng tượng nên vế if cần V2.", 1: "Vế if không dùng *will*.", 3: "Vế if không dùng *would*." } },
+        { q: "If my sisters ______ to Da Nang, they would swim.", opts: ["went", "goed", "go", "would go"], a: 0,
+          ex: "Nhìn *would swim* → loại 2; vế if dùng quá khứ đơn; *go* là động từ bất quy tắc nên thành *went*, không phải *goed*.",
+          why: { 1: "*go* là động từ bất quy tắc: V2 là *went*, không có *goed*.", 2: "*go* là hiện tại; *would swim* cần V2 ở vế if.", 3: "Vế if không dùng *would*." } },
+        { q: "If we ______ a car, we would take the bus.", opts: ["do not have", "would not have", "did not had", "did not have"], a: 3,
+          ex: "*would take* → loại 2; phủ định ở vế if là *did not* + động từ nguyên mẫu (*have*), không viết *did not had*.",
+          why: { 0: "*do not have* là hiện tại, không hợp với *would take*.", 1: "Vế if không dùng *would*.", 2: "Sau *did not* dùng động từ nguyên mẫu *have*, không dùng *had*." } },
+        { q: "Choose the correct sentence.", opts: ["If they would have time, they would visit Sapa by bus.", "If they had time, they would visit Sapa by bus.", "If they had time, they will visit Sapa by bus.", "If they have time, they would visit Sapa by bus."], a: 1,
+          ex: "Loại 2: vế if dùng quá khứ đơn (*had*), vế chính dùng *would* + động từ nguyên mẫu.",
+          why: { 0: "Câu này có *would* trong vế if.", 2: "Vế chính dùng *will*; loại 2 cần *would*.", 3: "*have* là hiện tại; vế if của loại 2 cần V2 *had*." } },
+        { q: "If Hoang ______ our tour guide, he would show us the best beaches.", opts: ["were", "is", "would be", "will be"], a: 0,
+          ex: "*would show* → loại 2, việc tưởng tượng; với be dùng *were* cho mọi chủ ngữ, kể cả *Hoang* (anh ấy); không dùng would hay will trong vế if.",
+          why: { 1: "*is* là hiện tại; *would show* cho biết đây là tưởng tượng nên dùng *were*.", 2: "Vế if không dùng *would*.", 3: "Vế if không dùng *will*." } }
+      ]
+    },
+    {
+      id: "t", hue: 350, tl: "past",
+      nameVi: "Câu điều kiện loại 3", nameEn: "Third Conditional", short: "Loại 3",
+      mini: ["had V3", "would have V3"],
+      formulas: [
+        ["Khẳng định", "If + S + had + V3, S + would + have + V3"],
+        ["Phủ định", "If + S + had + not + V3, S + would + not + have + V3"],
+        ["Nghi vấn", "Would + S + have + V3 + if + S + had + V3?"]
+      ],
+      clause: ["had + V3", "would have + V3"],
+      uses: [
+        "Việc đã không xảy ra trong quá khứ.",
+        "Kết quả tưởng tượng của việc đó, thường để tiếc nuối.",
+        "Có thể dùng could have hoặc might have (có thể đã), nhưng bài tập chỉ dùng would have."
+      ],
+      signals: ["yesterday", "last night", "last week", "last year"],
+      hints: ["tiếc nuối về quá khứ (a regret about the past)", "If + had + V3, would have + V3"],
+      golden: { en: "Past, not real? If + had + V3, then would have + V3.", vi: "Việc đã không xảy ra trong quá khứ thì vế if dùng had + V3 (dạng quá khứ phân từ, như taken, left), vế chính dùng would have + V3. Đừng quên had ở vế if và have sau would; không đặt would have sau if." },
+      selfQ: "Việc này đã không xảy ra trong quá khứ phải không?",
+      timeline: "Nằm ở quá khứ, trước bây giờ: sự thật đã xảy ra khác, nên động từ lùi hai bước.",
+      examples: [
+        { s: "[B: {If}] [S: Lan] [AUX: {had}] [V: {taken}] [O: the bus] [T: {yesterday},] [S: she] [AUX: {would} {have}] [V: {arrived}] [T: early]", vi: "Nếu hôm qua Lan đi xe buýt thì cô ấy đã đến sớm rồi (tiếc là cô ấy không đi)." },
+        { s: "[AUX: {Would}] [S: they] [AUX: {have}] [V: {caught}] [O: the plane] [B: {if}] [S: they] [AUX: {had}] [V: {taken}] [O: a taxi?]", vi: "Nếu lúc đó đi taxi (nhưng thực tế họ đã không đi), họ có kịp chuyến bay không?" },
+        { s: "[B: {If}] [S: Nam] [AUX: {had}] [V: {checked}] [O: the timetable] [T: {last night},] [S: he] [AUX: {would} {have}] [V: {caught}] [O: the ferry]", vi: "Nếu tối qua Nam xem lịch chạy tàu xe, anh ấy đã kịp chuyến phà rồi (tiếc là anh ấy không xem).", added: true }
+      ],
+      predict: {
+        q: "Ba câu đều nói về việc đã không xảy ra trong quá khứ (yesterday, last night). Vế chính có dạng gì?",
+        opts: ["would have + V3 (would have arrived)", "would + V (would arrive)", "had + V3 (had arrived)"],
+        a: 0,
+        expl: "Vế chính dùng would have + V3 (would have arrived, would have caught). Vế if dùng had + V3 (had taken). Động từ lùi hai bước vì việc đã qua và không có thật. Đó là câu điều kiện loại 3."
+      },
+      frames: [
+        { s: "[B#if: If] [S#s1: Nam] [AUX#a1: {had}] [V#v1: {left}] [T#t: early {yesterday},] [S#s2: he] [AUX#a2: {would have}] [V#v2: {caught}] [O#o2: the bus]", cap: "Tiếc nuối về hôm qua: vế if dùng had + V3, vế chính dùng would have + V3." },
+        { s: "[B#if: If] [S#s1: Nam] [X#a1: would have] [V#v1: left] [T#t: early yesterday,] [S#s2: he] [AUX#a2: would have] [V#v2: caught] [O#o2: the bus]", cap: "✗ Không đặt would have sau if, dù tiếng Việt nói \"đã\" ở cả hai vế." },
+        { s: "[B#if: If] [S#s1: Nam] [AUX#a1: {had not}] [V#v1: {missed}] [O#o1: the bus] [T#t: {yesterday},] [S#s2: he] [AUX#a2: {would not have}] [V#v2: {been}] [O#o2: late]", cap: "Phủ định: had not + V3, would not have + V3." },
+        { s: "[AUX#a2: {Would}] [S#s2: Nam] [AUX#a3: {have}] [V#v2: {caught}] [O#o2: the bus] [B#if: if] [S#s1: he] [AUX#a1: {had}] [V#v1: {left}] [T#t: early {yesterday}?]", cap: "Câu hỏi: Would + S + have + V3 + if + S + had + V3?" }
+      ],
+      mistakes: [
+        { wrong: "If Tom would have booked a room, he would have stayed near the beach.", bad: [2, 3], fix: "had booked", right: "If Tom had booked a room, he would have stayed near the beach.", why: "Vế if dùng had + V3, không dùng would have; tiếng Việt nói \"đã\" ở cả hai vế nên người học dễ lặp would have." },
+        { wrong: "If Mark took the train last week, he would have seen the mountains.", bad: [2], fix: "had taken", right: "If Mark had taken the train last week, he would have seen the mountains.", why: "Có last week → loại 3, vế if cần had + V3 (had taken); quá khứ đơn (took) là kiểu loại 2, chỉ dùng cho điều tưởng tượng ở bây giờ." }
+      ],
+      questions: [
+        { q: "If we ______ a taxi yesterday, we would have saved time.", opts: ["take", "had taken", "would have taken", "took"], a: 1,
+          ex: "Nhìn *yesterday* và *would have saved* → loại 3, việc đã không xảy ra; vế if dùng *had* + V3: *had taken*.",
+          why: { 0: "*take* là hiện tại, không hợp với *yesterday*.", 2: "Vế if không dùng *would have*.", 3: "*took* (V2) là kiểu loại 2; việc đã qua (*yesterday*) cần *had taken*." } },
+        { q: "If Nam ______ early yesterday, he would have caught the bus.", opts: ["had leaved", "had leave", "had left", "has left"], a: 2,
+          ex: "Nhìn *yesterday* và *would have caught* → loại 3; vế if dùng *had* + V3; *leave* là động từ bất quy tắc: V3 là *left*, không phải *leaved*.",
+          why: { 0: "*leave* là động từ bất quy tắc: V3 là *left*, không có *leaved*.", 1: "Sau *had* dùng V3, không dùng động từ nguyên mẫu.", 3: "*has left* là hiện tại hoàn thành, không hợp với *yesterday* và *would have caught*." } },
+        { q: "If you had left early, you ______ the bus.", opts: ["would not have missed", "would not missed", "will not miss", "did not miss"], a: 0,
+          ex: "*had left* → loại 3; vế chính phủ định là *would not have* + V3: *would not have missed*.",
+          why: { 1: "Thiếu *have*: phải là *would not have missed*.", 2: "*will* là của loại 1; *had left* cho biết đây là loại 3.", 3: "*did not miss* chỉ kể việc thật trong quá khứ, không phải kết quả tưởng tượng." } },
+        { q: "Choose the correct sentence.", opts: ["If Mai would have bought the tickets, she would have visited Hue.", "If Mai had buyed the tickets, she would have visited Hue.", "If Mai had bought the tickets, she would visited Hue.", "If Mai had bought the tickets, she would have visited Hue."], a: 3,
+          ex: "Loại 3: vế if dùng *had* + V3 (*had bought*), vế chính dùng *would have* + V3.",
+          why: { 0: "Câu này có *would have* trong vế if.", 1: "*buy* là động từ bất quy tắc: V3 là *bought*, không có *buyed*.", 2: "Thiếu *have*: phải là *would have visited*." } },
+        { q: "If Ben ______ on platform 2 yesterday, he would have caught the train.", opts: ["waited", "had waited", "would have waited", "has waited"], a: 1,
+          ex: "Nhìn *yesterday* và *would have caught* → loại 3, không phải loại 2; vế if cần *had* + V3: *had waited*.",
+          why: { 0: "*waited* là kiểu loại 2, sai với việc đã qua (*yesterday*).", 2: "Vế if không dùng *would have*.", 3: "*has waited* là hiện tại hoàn thành, không hợp với *yesterday*." } }
+      ]
+    }
+  ],
+
+  /* So sánh */
+  compare: {
+    mainIdea: "Cả hai loại đều nói về điều không có thật, sự thật thì ngược lại. Loại 2 nằm ở bây giờ hoặc tương lai nên động từ lùi một bước (V2 + would); loại 3 nằm ở quá khứ, trước bây giờ, nên lùi hai bước (had + V3 + would have + V3).",
+    tree: [
+      { q: "Việc này chỉ là tưởng tượng ở bây giờ hoặc tương lai?", yes: "s" },
+      { q: "Việc này đã không xảy ra trong quá khứ (yesterday, last week)?", yes: "t" }
+    ],
+    other: "Có thể là câu điều kiện có thật (loại 0 hoặc loại 1, Phần A).",
+    pair: [
+      { pt: "s", s: "[B#if: {If}] [S#s1: Anna] [V#v1: {took}] [O#o1: the bus,] [S#s2: she] [AUX#a2: {would} {not}] [V#v2: {miss}] [O#o2: the tour]", vi: "Nếu Anna đi xe buýt (nhưng thực tế cô ấy không đi), cô ấy sẽ không lỡ chuyến tham quan." },
+      { pt: "t", s: "[B#if: {If}] [S#s1: Anna] [AUX#a1: {had}] [V#v1: {taken}] [O#o1: the bus] [T#t: {yesterday},] [S#s2: she] [AUX#a2: {would} {not} {have}] [V#v2: {missed}] [O#o2: the tour]", vi: "Nếu hôm qua Anna đi xe buýt, cô ấy đã không lỡ chuyến tham quan (tiếc là cô ấy đã lỡ)." }
+    ],
+    close: "Câu A là tưởng tượng về bây giờ (Anna vẫn không đi xe buýt), còn câu B là tiếc nuối về hôm qua (Anna đã lỡ chuyến tham quan rồi).",
+    sort: [
+      { q: "If I had more money, I would travel abroad.", a: 0, ex: "Tưởng tượng ở bây giờ (thực tế không có nhiều tiền): *had* + *would travel* → loại 2." },
+      { q: "If we had booked a hostel last week, we would have saved money.", a: 1, ex: "*last week* → việc đã không xảy ra: *had booked* + *would have saved* → loại 3." },
+      { q: "If the ferry were bigger, it would carry more cars.", a: 0, ex: "Tưởng tượng ở bây giờ (phà không lớn): *were* + *would carry* → loại 2." },
+      { q: "If Nam had not got stuck in traffic yesterday, he would have caught the train.", a: 1, ex: "*yesterday* → tiếc nuối về quá khứ: *had not got* + *would have caught* → loại 3." }
+    ]
+  },
+
+  /* Ôn tập tổng hợp: type "gap" = gõ đáp án, "mc" = trắc nghiệm */
+  review: {
+    note: "Viết dạng đầy đủ (would have, had not). Dạng viết tắt đúng (hadn't left) cũng được chấp nhận. Ở vế chính, dùng would, không dùng could hay might; với be ở loại 2, dùng were cho mọi chủ ngữ.",
+    items: [
+      { type: "gap", q: "If you ______ (miss) the bus last night, you would have walked home.", ans: ["had missed"], ex: "*last night* và *would have walked* → loại 3, việc đã không xảy ra; vế if dùng *had* + V3: *had missed*." },
+      { type: "gap", q: "If Hai ______ (have) a passport, he would fly to Korea.", ans: ["had"], ex: "*would fly* → loại 2, việc tưởng tượng; vế if dùng quá khứ đơn; *have* thành *had* (bất quy tắc)." },
+      { type: "mc", q: "If the bus had not broken down, we ______ before dark.", opts: ["would have arrived", "would arrive", "will arrive", "had arrived"], a: 0, ex: "*had not broken down* → loại 3 (xe đã hỏng thật); vế chính dùng *would have* + V3: *would have arrived*.", why: { 1: "*would arrive* là của loại 2 (tưởng tượng ở bây giờ); vế if *had not broken down* cần *would have arrived*.", 2: "*will* là của loại 1.", 3: "*had arrived* thiếu *would*; vế chính cần *would have* + V3." }, added: true },
+      { type: "gap", q: "If they had booked the trip last week, they ______ (go) to Hue.", ans: ["would have gone"], ex: "*last week* và *had booked* → loại 3; vế chính dùng *would have* + V3; *go* thành *gone* (bất quy tắc), không phải *went*." },
+      { type: "gap", q: "If the bus ______ (stop) near our hotel, we would take it every day.", ans: ["stopped"], ex: "*would take* → loại 2, vế if dùng quá khứ đơn; *stop* nhân đôi *p* rồi thêm *ed*: *stopped*." },
+      { type: "mc", q: "If my brother ______ a car, he would give me a lift to the station.", opts: ["has", "had", "would have", "had had"], a: 1, ex: "*would give* → loại 2 (anh trai không có xe); vế if dùng V2: *had*.", why: { 0: "*has* là hiện tại; *would give* cần V2 ở vế if.", 2: "Vế if không dùng *would*.", 3: "*had had* là của loại 3; vế chính *would give* là loại 2." }, added: true },
+      { type: "gap", q: "If Ly ______ (not leave) late yesterday, she would have caught the train.", ans: ["had not left"], ex: "*yesterday* và *would have caught* → loại 3; phủ định ở vế if là *had not* + V3; *leave* thành *left* (bất quy tắc)." },
+      { type: "gap", q: "If I ______ (be) you, I would take the train to Hanoi.", ans: ["were"], ex: "*If I ... you* và *would take* → lời khuyên, loại 2; với be dùng *were* cho mọi chủ ngữ, kể cả *I*." }
+    ]
+  },
+
+  /* Từ vựng: w | loại từ | IPA | nghĩa | câu ví dụ | pt (điểm ngữ pháp) | forms (mẫu để tự nhận ra trong câu) */
+  vocab: [
+    { w: "car", pos: "n", ipa: "/kɑː/", vi: "xe hơi", pt: "s", forms: "cars?", ex: "If Minh had a car, he would drive to Da Lat." },
+    { w: "taxi", pos: "n", ipa: "/ˈtæksi/", vi: "xe taxi", pt: "s", forms: "taxis?", ex: "If we had taken a taxi last night, we would have arrived on time." },
+    { w: "ticket", pos: "n", ipa: "/ˈtɪkɪt/", vi: "vé", pt: "s", forms: "tickets?", ex: "If Nam had bought his ticket online, he would have saved money." },
+    { w: "trip", pos: "n", ipa: "/trɪp/", vi: "chuyến đi", pt: "s", forms: "trips?", ex: "If I had a week off, I would go on a trip to Phu Quoc." },
+    { w: "airport", pos: "n", ipa: "/ˈeəpɔːt/", vi: "sân bay", pt: "s", forms: "airports?", ex: "If the airport were closer, we would go there by bus." },
+    { w: "bus", pos: "n", ipa: "/bʌs/", vi: "xe buýt", pt: "t", forms: "bus(?:es)?", ex: "If the bus came every five minutes, more people would use it." },
+    { w: "bag", pos: "n", ipa: "/bæɡ/", vi: "túi, cặp", pt: "t", forms: "bags?", ex: "If Lan had packed a smaller bag, she would have walked faster." },
+    { w: "miss", pos: "v", ipa: "/mɪs/", vi: "lỡ, nhỡ (xe)", pt: "t", forms: "(?:miss|misses|missed)", ex: "If Nam had left earlier, he would not have missed the train." },
+    { w: "arrive", pos: "v", ipa: "/əˈraɪv/", vi: "đến nơi", pt: "t", forms: "arriv(?:e|es|ed)", ex: "If the plane had arrived on time, we would have met you at 6." },
+    { w: "platform", pos: "n", ipa: "/ˈplætfɔːm/", vi: "sân ga", pt: "t", forms: "platforms?", ex: "If you had waited on platform 3, you would have seen the train." },
+    { w: "driver", pos: "n", ipa: "/ˈdraɪvə/", vi: "tài xế", forms: "drivers?", ex: "If the driver had stopped, we would have got off near the hotel." },
+    { w: "passport", pos: "n", ipa: "/ˈpɑːspɔːt/", vi: "hộ chiếu", forms: "passports?", ex: "If Hai had a passport, he would fly to Korea." },
+    { w: "suitcase", pos: "n", ipa: "/ˈsuːtkeɪs/", vi: "vali", forms: "suitcases?", ex: "If my suitcase were lighter, I would carry it up the stairs." },
+    { w: "backpack", pos: "n", ipa: "/ˈbækpæk/", vi: "ba lô", forms: "backpacks?", ex: "If I travelled for a month, I would only take a backpack." },
+    { w: "tour", pos: "n", ipa: "/tʊə/", vi: "chuyến tham quan", forms: "tours?", ex: "If the weather had been nice yesterday, we would have joined the boat tour." },
+    { w: "tour guide", pos: "n phr", ipa: "/ˈtʊə ɡaɪd/", vi: "hướng dẫn viên du lịch", forms: "tour guides?", ex: "If I were a tour guide, I would show tourists around my city." },
+    { w: "passenger", pos: "n", ipa: "/ˈpæsɪndʒə/", vi: "hành khách", forms: "passengers?", ex: "If there were fewer passengers, the bus would be more comfortable." },
+    { w: "timetable", pos: "n", ipa: "/ˈtaɪmteɪbl/", vi: "lịch chạy tàu xe", forms: "timetables?", ex: "If Nam had checked the timetable, he would have known about the change." },
+    { w: "ferry", pos: "n", ipa: "/ˈferi/", vi: "phà", forms: "ferry|ferries", ex: "If there were a ferry to the island, we would visit it every summer." },
+    { w: "coach", pos: "n", ipa: "/kəʊtʃ/", vi: "xe khách", forms: "coach(?:es)?", ex: "If the coach were cheaper, more students would use it." },
+    { w: "sleeper bus", pos: "n phr", ipa: "/ˈsliːpə bʌs/", vi: "xe giường nằm", forms: "sleeper bus(?:es)?", ex: "If Nam took the sleeper bus, he would sleep all the way to Sapa." },
+    { w: "fare", pos: "n", ipa: "/feə/", vi: "giá vé (xe, tàu)", forms: "fares?", ex: "If the fare were lower, I would take the train every weekend." },
+    { w: "souvenir", pos: "n", ipa: "/ˌsuːvəˈnɪə/", vi: "quà lưu niệm", forms: "souvenirs?", ex: "If I had more money, I would buy souvenirs for all my friends." },
+    { w: "hostel", pos: "n", ipa: "/ˈhɒstl/", vi: "nhà nghỉ giá rẻ", forms: "hostels?", ex: "If we had booked a hostel, we would have saved a lot of money." },
+    { w: "on foot", pos: "adv phr", ipa: "/ɒn ˈfʊt/", vi: "đi bộ", forms: "on foot", ex: "If the hotel were near the beach, we would go there on foot." },
+    { w: "catch the train / bus", pos: "v phr", ipa: "/kætʃ ðə treɪn/", vi: "kịp chuyến tàu / xe buýt", forms: "(?:catch|catches|caught) (?:the|a|an)(?: [a-z]+)? (?:train|bus|plane|ferry)", ex: "If you had run, you would have caught the train." },
+    { w: "hire a car", pos: "v phr", ipa: "/ˈhaɪər ə kɑː/", vi: "thuê xe hơi", forms: "(?:hire|hires|hired) a car", ex: "If we hired a car, we would visit more places." },
+    { w: "rent a motorbike", pos: "v phr", ipa: "/rent ə ˈməʊtəbaɪk/", vi: "thuê xe máy", forms: "(?:rent|rents|rented) a motorbike", ex: "If I were in Ha Giang, I would rent a motorbike." },
+    { w: "check out", pos: "phr v", ipa: "/tʃek ˈaʊt/", vi: "trả phòng (khách sạn)", forms: "(?:check|checks|checked) out", ex: "If we had checked out earlier, we would have caught the bus." },
+    { w: "see the sights", pos: "v phr", ipa: "/siː ðə saɪts/", vi: "ngắm cảnh, tham quan", forms: "(?:see|saw|seen) the sights", ex: "If we had more time in Hue, we would see the sights." },
+    { w: "boarding pass", pos: "n phr", ipa: "/ˈbɔːdɪŋ pɑːs/", vi: "thẻ lên máy bay", forms: "boarding pass(?:es)?", ex: "If Mai had lost her boarding pass, she would not have got on the plane." },
+    { w: "gate", pos: "n", ipa: "/ɡeɪt/", vi: "cổng ra máy bay", forms: "gates?", ex: "If we had gone to the right gate, we would not have run." },
+    { w: "departure", pos: "n", ipa: "/dɪˈpɑːtʃə/", vi: "giờ khởi hành, sự khởi hành", forms: "departures?", ex: "If we had checked the departure time, we would not have missed the ferry." },
+    { w: "destination", pos: "n", ipa: "/ˌdestɪˈneɪʃn/", vi: "điểm đến", forms: "destinations?", ex: "If I chose the destination for our next trip, it would be Hoi An." },
+    { w: "abroad", pos: "adv", ipa: "/əˈbrɔːd/", vi: "ở nước ngoài, ra nước ngoài", forms: "abroad", ex: "If Nam lived abroad, he would call his parents every day." },
+    { w: "book a tour", pos: "v phr", ipa: "/bʊk ə tʊə/", vi: "đặt chuyến tham quan", forms: "book(?:s|ed)? a (?:boat )?tour", ex: "If we had booked a tour, a guide would have shown us the old town." },
+    { w: "give somebody a lift", pos: "v phr", ipa: "/ɡɪv ˈsʌmbədi ə lɪft/", vi: "cho ai đi nhờ xe", forms: "(?:give|gives|gave|given) (?:me|you|him|her|us|them) a lift", ex: "If my brother had a car, he would give me a lift to school." },
+    { w: "drop somebody off", pos: "phr v", ipa: "/drɒp ˈsʌmbədi ɒf/", vi: "thả ai xuống (xe)", forms: "(?:drop|drops|dropped) (?:me|you|him|her|us|them) off", ex: "If you dropped me off at the station, I would catch the early train." },
+    { w: "break down", pos: "phr v", ipa: "/breɪk ˈdaʊn/", vi: "(xe) bị hỏng", forms: "(?:break|breaks|broke|broken) down", ex: "If the bus had not broken down, we would have arrived before dark." },
+    { w: "get stuck in traffic", pos: "v phr", ipa: "/ɡet stʌk ɪn ˈtræfɪk/", vi: "bị kẹt xe", forms: "(?:get|gets|got) stuck in traffic", ex: "If we had left at 7, we would not have got stuck in traffic." },
+    { w: "run out of petrol", pos: "phr v", ipa: "/rʌn aʊt əv ˈpetrəl/", vi: "hết xăng", forms: "(?:run|runs|ran) out of petrol", ex: "If Dad had filled the tank, we would not have run out of petrol." }
+  ]
+};
+
+/* =====================================================================
+   CODE HIỂN THỊ (không cần sửa)
+   ===================================================================== */
+const L = LESSON;
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const PT = {}; L.points.forEach((p, i) => { p.idx = i; PT[p.id] = p; });
+const RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+const slug = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/gi, "d").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function shuffle(arr, r = Math.random) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+const md = s => esc(s).replace(/\*(.+?)\*/g, "<em>$1</em>");
+
+/* ---------- Kiểm tra dữ liệu ---------- */
+const ERR = [];
+const VX = [];
+L.vocab.forEach((v, i) => { try { VX.push({ i, re: new RegExp("\\b(?:" + v.forms + ")\\b", "gi") }); } catch (e) { ERR.push(`Từ vựng "${v.w}": mẫu nhận dạng (forms) bị lỗi.`); } });
+function checkMarks(str, where) {
+  String(str).replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, (m, a, h) => { if (!L.vocab.some(v => v.w === h)) ERR.push(`${where}: từ vựng "${h}" không có trong danh sách.`); return m; });
+  String(str).replace(/\{\{([^|}]+)\|/g, (m, id) => { if (!PT[id]) ERR.push(`${where}: không có điểm ngữ pháp id "${id}".`); return m; });
+}
+L.points.forEach(p => {
+  p.examples.forEach((e, i) => checkMarks(e.s, `${p.nameVi} – ví dụ ${i + 1}`));
+  p.questions.forEach((q, i) => { if (!(q.a >= 0 && q.a < q.opts.length)) ERR.push(`${p.nameVi} – câu ${i + 1}: thiếu đáp án đúng.`); });
+  p.mistakes.forEach((m, i) => { if (!m.bad || !m.bad.length) ERR.push(`${p.nameVi} – lỗi ${i + 1}: thiếu vị trí từ sai.`); });
+});
+L.review.items.forEach((q, i) => { if (q.type === "mc" && !(q.a >= 0 && q.a < q.opts.length)) ERR.push(`Ôn tập – câu ${i + 1}: thiếu đáp án.`); if (q.type === "gap" && !(q.ans && q.ans.length)) ERR.push(`Ôn tập – câu ${i + 1}: thiếu đáp án.`); });
+L.vocab.forEach(v => { if (v.pt && !PT[v.pt]) ERR.push(`Từ vựng "${v.w}": điểm ngữ pháp "${v.pt}" không tồn tại.`); });
+
+/* ---------- Lưu tiến độ ---------- */
+const KEY = "prestudy:" + slug(L.meta.titleEn || L.meta.titleVi);
+const blank = () => ({ scr: 0, seen: {}, ans: {}, ord: {}, qi: {}, pred: {}, spot: {}, known: {}, name: "", notes: "", time: 0, started: false, listen: false,
+  set: { voice: "en-GB", rate: 1, scale: 1, theme: "auto" } });
+let st = blank();
+try { const r = JSON.parse(localStorage.getItem(KEY) || "null"); if (r) { st = Object.assign(blank(), r); st.set = Object.assign(blank().set, r.set || {}); } } catch (e) {}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} }
+
+/* ---------- Câu có tô màu ---------- */
+function parseChunks(str) {
+  const keep = [];
+  const s = String(str).replace(/\[\[([^\]]+)\]\]/g, (m, x) => { keep.push(x); return "\u0001" + (keep.length - 1) + "\u0002"; });
+  const out = []; const re = /\[([A-Z]+)(?:#(\w+))?:\s*([^\]]*)\]/g; let m;
+  while ((m = re.exec(s))) out.push({ role: m[1], key: m[2] || "", text: m[3].replace(/\u0001(\d+)\u0002/g, (a, n) => "[[" + keep[+n] + "]]").trim() });
+  if (!out.length) out.push({ role: "", key: "", text: String(str) });
+  const last = out[out.length - 1]; if (!/[.?!]$/.test(last.text)) last.text += ".";
+  return out;
+}
+function autolink(text) {
+  const hits = [];
+  VX.forEach(x => { x.re.lastIndex = 0; let m; while ((m = x.re.exec(text))) { if (!m[0]) { x.re.lastIndex++; continue; } hits.push({ s: m.index, e: m.index + m[0].length, i: x.i }); } });
+  hits.sort((a, b) => a.s - b.s || (b.e - b.s) - (a.e - a.s));
+  let out = "", pos = 0;
+  for (const h of hits) { if (h.s < pos) continue; out += esc(text.slice(pos, h.s)) + `<span class="vw" role="button" tabindex="0" data-v="${h.i}">${esc(text.slice(h.s, h.e))}</span>`; pos = h.e; }
+  return out + esc(text.slice(pos));
+}
+/* rich: {x} = dạng cần học, {{id|x}} = theo màu điểm id, [[x|từ]] = từ vựng */
+function rich(text, pt, role, link = true) {
+  const parts = String(text).split(/(\{\{[^}]+\}\}|\{[^}]+\}|\[\[[^\]]+\]\])/);
+  return parts.map(p => {
+    let m;
+    if ((m = p.match(/^\{\{([^|}]+)\|([^}]+)\}\}$/))) return `<mark class="hl" style="--h:${(PT[m[1]] || {}).hue || 220}">${link ? autolink(m[2]) : esc(m[2])}</mark>`;
+    if ((m = p.match(/^\{([^}]+)\}$/))) return `<mark class="${role === "T" ? "sig" : "hl"}" style="--h:${pt ? pt.hue : 220}">${link ? autolink(m[1]) : esc(m[1])}</mark>`;
+    if ((m = p.match(/^\[\[([^|\]]+)\|([^\]]+)\]\]$/))) { const i = L.vocab.findIndex(v => v.w === m[2]); return `<span class="vw" role="button" tabindex="0" data-v="${i}">${esc(m[1])}</span>`; }
+    return link ? autolink(p) : esc(p);
+  }).join("");
+}
+function sent(str, pt, link = true) { return parseChunks(str).map(c => `<span class="ck r-${c.role}"${c.key ? ` data-k="${c.key}"` : ""}>${rich(c.text, pt, c.role, link)}</span>`).join(""); }
+const plainText = s => String(s).replace(/\{\{[^|}]+\|([^}]+)\}\}/g, "$1").replace(/[{}]/g, "").replace(/\[\[([^|\]]+)\|[^\]]+\]\]/g, "$1").replace(/\*/g, "");
+function plainS(str) { return parseChunks(str).filter(c => c.role !== "X").map(c => plainText(c.text)).join(" "); }
+function stem(q) { return autolink(q).replace(/_{3,}/g, '<span class="blank" aria-label="chỗ trống"></span>'); }
+const spk = t => `<button class="spk" data-say="${esc(t)}" aria-label="Nghe">🔊</button>`;
+function sentCard(s, pt, vi, extra = "") {
+  return `<div class="sc" style="--h:${pt ? pt.hue : 220}"><p class="sent en">${sent(s, pt)}${extra}</p><div class="scb">${spk(plainS(s))}${vi ? `<button class="vbtn" data-vi aria-expanded="false">👁 Xem nghĩa</button><p class="vi" hidden>${esc(vi)}</p>` : ""}</div></div>`;
+}
+function legend(open) {
+  const r = L.roles;
+  return `<details class="leg"${open ? " open" : ""}><summary>Chú thích màu</summary><div class="chips">${Object.keys(r).map(k => `<span class="chip r-${k}" style="${k === "T" ? "text-decoration:none" : ""}">${k} = ${esc(r[k])}</span>`).join("")}</div>
+  <p class="legx">Nền màu = dạng cần học · khung viền = từ chỉ thời gian · <span class="vw" style="cursor:default">gạch chân chấm</span> = từ vựng, chạm để xem nghĩa.</p></details>`;
+}
+function mini(cur) {
+  return `<div class="mini" aria-label="Bản đồ bài học: ${cur === "all" ? "cả hai loại" : cur ? PT[cur].short : ""}">${L.points.map(p => `<div class="mrow ${cur === "all" || cur === p.id ? "on" : ""}" style="--h:${p.hue}"><span class="mlab">${esc(p.short)}</span>${p.mini.map(x => `<span class="mcell">${esc(x)}</span>`).join("")}</div>`).join("")}</div>`;
+}
+
+/* ---------- Trục thời gian (SVG) ---------- */
+function timeline(p, opts = {}) {
+  const h = p.hue, col = `hsl(${h} 65% 45%)`, W = 480, H = 152, y = 80;
+  let g = `<line class="ax" x1="14" y1="${y}" x2="462" y2="${y}"/><polygon points="466,${y} 454,${y - 7} 454,${y + 7}" fill="currentColor" style="color:var(--mut)"/>`;
+  g += `<text x="14" y="${H - 10}" font-size="16">QUÁ KHỨ</text><text x="240" y="${H - 10}" font-size="16" text-anchor="middle">HIỆN TẠI</text><text x="466" y="${H - 10}" font-size="16" text-anchor="end">TƯƠNG LAI</text>`;
+  const star = `<text x="240" y="${y - 12}" font-size="26" text-anchor="middle" style="fill:#e0a400">★</text><line x1="240" y1="${y - 8}" x2="240" y2="${y + 10}" stroke="#e0a400" stroke-width="2.5"/>`;
+  const anim = RM ? "" : `<animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.6s" repeatCount="indefinite"/>`;
+  if (p.tl === "imag") {
+    g += `<rect x="232" y="${y - 34}" width="226" height="68" rx="16" fill="hsl(${h} 70% 60% / .14)" stroke="${col}" stroke-width="2.5" stroke-dasharray="8 6">${anim}</rect>`;
+    g += star;
+    g += `<text x="350" y="${y + 26}" font-size="16" text-anchor="middle" style="fill:${col}">💭 không có thật</text>`;
+    g += `<path d="M226 ${y - 44} Q 196 ${y - 70} 164 ${y - 46}" fill="none" stroke="${col}" stroke-width="3"/><polygon points="158,${y - 40} 160,${y - 54} 172,${y - 46}" fill="${col}"/>`;
+    g += `<text x="128" y="${y - 52}" font-size="15" text-anchor="middle" style="fill:${col}">V2: lùi 1 bước</text>`;
+  } else if (p.tl === "past") {
+    g += `<rect x="40" y="${y - 34}" width="168" height="68" rx="16" fill="hsl(${h} 70% 60% / .14)" stroke="${col}" stroke-width="2.5" stroke-dasharray="8 6">${anim}</rect>`;
+    g += `<circle cx="124" cy="${y}" r="10" fill="var(--card)" stroke="${col}" stroke-width="3.5"/><path d="M116 ${y - 8} L132 ${y + 8} M132 ${y - 8} L116 ${y + 8}" stroke="${col}" stroke-width="3"/>`;
+    g += `<text x="124" y="${y + 28}" font-size="15" text-anchor="middle" style="fill:${col}">đã không xảy ra</text>`;
+    g += star;
+    g += `<path d="M232 ${y - 42} Q 200 ${y - 74} 168 ${y - 56} Q 150 ${y - 74} 128 ${y - 46}" fill="none" stroke="${col}" stroke-width="3"/><polygon points="122,${y - 40} 124,${y - 54} 136,${y - 46}" fill="${col}"/>`;
+    g += `<text x="330" y="${y - 50}" font-size="15" text-anchor="middle" style="fill:${col}">had V3: lùi 2 bước</text>`;
+  } else if (p.tl === "all") {
+    g += star;
+    for (let x = 40; x <= 440; x += 50) if (Math.abs(x - 240) > 12) g += `<circle cx="${x}" cy="${y}" r="8" fill="${col}"/>`;
+    g += `<text x="240" y="${y + 34}" font-size="16" text-anchor="middle" style="fill:${col}">● ● ● luôn đúng · mỗi lần</text>`;
+  } else {
+    g += star;
+    g += `<path d="M252 ${y - 4} Q 320 ${y - 46} 386 ${y - 10}" fill="none" stroke="${col}" stroke-width="3" stroke-dasharray="7 6">${anim}</path><circle cx="400" cy="${y}" r="10" fill="var(--card)" stroke="${col}" stroke-width="3.5"/>`;
+  }
+  return `<svg class="tl" viewBox="0 0 ${W} ${H}" role="img" aria-label="Trục thời gian ${esc(p.nameVi)}: ${esc(p.timeline)}">${g}</svg>`;
+}
+const symLegend = `<p class="legx">${esc(L.symLegend)}</p>`;
+
+function formula(f) {
+  const toks = f.split(/(\s*\+\s*|,\s*|\?)/).filter(t => t && t.trim() !== "");
+  return toks.map(t => {
+    const x = t.trim();
+    if (x === "+") return `<span class="fp">+</span>`;
+    if (x === ",") return `<span class="fcm">,</span>`;
+    if (x === "?") return `<span class="fcm">?</span>`;
+    let c = "";
+    if (/^if$/i.test(x)) c = "B"; else if (x === "S") c = "S";
+    else if (/^(will|would|had|have|did|do\/does|Do\/Does|Will|Would|not|do|does)$/.test(x)) c = "AUX";
+    else if (/V/.test(x)) c = "V";
+    return `<span class="fc ${c}">${esc(x)}</span>`;
+  }).join("");
+}
+function clause(p) {
+  return `<div class="cl" style="--h:${p.hue}"><div class="clb"><small>Vế if (điều kiện)</small><b><span class="r-B">If</span> + S + <span class="r-V">${esc(p.clause[0])}</span></b></div><div class="cla" aria-hidden="true">➜</div><div class="clb"><small>Vế chính (kết quả)</small><b>S + <span class="r-V">${esc(p.clause[1])}</span></b></div></div>`;
+}
+
+/* ---------- Giọng đọc ---------- */
+const SS = window.speechSynthesis || null; let voices = [], speakBtn = null, warned = false;
+function loadVoices() { try { voices = SS ? SS.getVoices() : []; } catch (e) { voices = []; } }
+if (SS) { loadVoices(); try { SS.onvoiceschanged = loadVoices; } catch (e) {} }
+function stopSay() { try { SS && SS.cancel(); } catch (e) {} if (speakBtn) { speakBtn.classList.remove("on"); speakBtn.textContent = speakBtn.dataset.ico || "🔊"; } speakBtn = null; }
+function say(text, btn) {
+  if (!SS || typeof SpeechSynthesisUtterance === "undefined") { if (!warned) { toast("Trình duyệt này chưa đọc được tiếng Anh. Hãy thử Chrome hoặc Safari."); warned = true; } return; }
+  if (btn && speakBtn === btn) { stopSay(); return; }
+  stopSay();
+  const u = new SpeechSynthesisUtterance(text); u.lang = st.set.voice; u.rate = st.set.rate;
+  const v = voices.find(v => v.lang.replace("_", "-") === st.set.voice) || voices.find(v => /^en/i.test(v.lang));
+  if (v) u.voice = v; else if (!warned && voices.length) { toast("Máy bạn chưa có giọng đọc tiếng Anh. Bạn có thể cài thêm trong phần cài đặt giọng nói của máy."); warned = true; }
+  if (btn) { btn.dataset.ico = btn.textContent; btn.textContent = "⏹"; btn.classList.add("on"); speakBtn = btn; }
+  const end = () => { if (speakBtn === btn) { if (btn) { btn.classList.remove("on"); btn.textContent = btn.dataset.ico || "🔊"; } speakBtn = null; } };
+  u.onend = end; u.onerror = end;
+  try { SS.speak(u); } catch (e) { end(); }
+}
+
+/* ---------- Thông báo nhỏ, pháo hoa ---------- */
+let toastT;
+function toast(m) { const t = $("#toast"); t.textContent = m; t.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("on"), 4200); }
+function cheer(el) {
+  if (RM || !el) return; const r = el.getBoundingClientRect();
+  ["🎉", "⭐", "✨", "🎊", "⭐"].forEach((e, i) => { const s = document.createElement("span"); s.className = "confetti"; s.textContent = e; s.style.left = (r.left + r.width / 2) + "px"; s.style.top = (r.top + 10) + "px"; s.style.setProperty("--dx", (Math.cos(i * 1.3) * 90) + "px"); s.style.setProperty("--dy", (-60 - i * 18) + "px"); document.body.appendChild(s); setTimeout(() => s.remove(), 1100); });
+}
+
+/* ---------- Bộ câu hỏi (trắc nghiệm + gõ đáp án) ---------- */
+const norm = s => String(s).toLowerCase().replace(/[’‘`´]/g, "'").replace(/\s+/g, " ").trim().replace(/[.!]+$/, "");
+function variants(list) {
+  const out = new Set(); list.forEach(a => { const n = norm(a); out.add(n);
+    [["will not", "won't"], ["would not", "wouldn't"], ["would have", "would've"], ["had not", "hadn't"], ["did not", "didn't"], ["do not", "don't"], ["does not", "doesn't"], ["is not", "isn't"], ["are not", "aren't"]].forEach(([f, c]) => { if (n.includes(f)) out.add(n.replace(f, c)); if (n.includes(c)) out.add(n.replace(c, f)); }); });
+  return out;
+}
+const QUIZ = {};
+function quizItems(key) {
+  if (key.startsWith("p-")) return PT[key.slice(2)].questions.map(q => Object.assign({ type: "mc" }, q));
+  if (key === "rev") return L.review.items;
+  if (key === "sort") return L.compare.sort.map(s => ({ type: "mc", q: s.q, opts: L.points.map(p => p.nameVi), a: s.a, ex: s.ex, fixed: true, why: {} }));
+  if (key === "voc") return L.vocab.map((v, i) => {
+    const r = rng(i * 31 + 7); const others = shuffle(L.vocab.filter((x, j) => j !== i), r).slice(0, 3).map(x => x.vi);
+    return { type: "mc", q: v.w, voc: i, opts: [v.vi, ...others], a: 0, ex: `*${v.w}* (${v.pos}) = ${v.vi}. Ví dụ: ${v.ex}`, why: {} };
+  });
+  return [];
+}
+function qState(key) { st.ans[key] = st.ans[key] || []; return st.ans[key]; }
+function score(key) { const n = quizItems(key).length, a = qState(key); let c = 0, d = 0; for (let i = 0; i < n; i++) if (a[i] && a[i].f !== undefined) { d++; if (a[i].f) c++; } return { c, d, n }; }
+function order(key, i, n, fixed) { const k = key + "_" + i; if (!st.ord[k] || st.ord[k].length !== n) st.ord[k] = fixed ? [...Array(n).keys()] : shuffle([...Array(n).keys()]); return st.ord[k]; }
+function quizBox(key) { return `<div class="quiz" data-key="${key}"></div>`; }
+function renderQuiz(box) {
+  const key = box.dataset.key, items = quizItems(key), A = qState(key);
+  let i = st.qi[key] || 0; if (i >= items.length) i = 0; st.qi[key] = i;
+  const it = items[i], s = A[i] || {};
+  const dots = items.map((q, j) => { const a = A[j]; const c = a && a.f !== undefined ? (a.f ? "ok" : "no") : ""; return `<button class="qd ${c} ${j === i ? "cur" : ""}" data-qj="${j}" aria-label="Câu ${j + 1}${c === "ok" ? ", đúng" : c === "no" ? ", sai" : ""}">${j + 1}</button>`; }).join("");
+  let body = "";
+  const isVoc = it.voc !== undefined, hide = isVoc && st.listen && s.c === undefined;
+  if (isVoc) body += `<p class="qstem en"><b>${hide ? "🎧 Nghe và chọn nghĩa đúng" : esc(it.q)}</b> ${hide ? "" : `<span class="mut">(${esc(L.vocab[it.voc].pos)}) ${esc(L.vocab[it.voc].ipa)}</span>`} ${spk(it.q)}</p>`;
+  else body += `<p class="qstem en">${stem(it.q)}</p>`;
+  if (it.type === "gap") {
+    body += `<input class="gin ${s.ok === true ? "ok" : s.ok === false ? "no" : ""}" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Gõ đáp án…" aria-label="Đáp án câu ${i + 1}" value="${esc(s.c || "")}" ${s.ok !== undefined ? "readonly" : ""}>`;
+    if (s.ok === undefined) body += `<div class="qnav"><button class="btn pri" data-qchk>Kiểm tra ✓</button></div>`;
+  } else {
+    const ord = order(key, i, it.opts.length, it.fixed);
+    body += ord.map((oi, k) => {
+      let cls = ""; if (s.c !== undefined) { if (oi === it.a) cls = "ok"; else if (oi === s.c) cls = "no"; else cls = "dim"; }
+      return `<button class="opt en ${cls}" data-qo="${oi}" ${s.c !== undefined ? "disabled" : ""}><span class="lt">${"ABCD"[k]}</span><span>${esc(it.opts[oi])}</span></button>`;
+    }).join("");
+  }
+  if (s.ok !== undefined) {
+    const right = it.type === "gap" ? it.ans[0] : it.opts[it.a];
+    if (s.ok) body += `<div class="fb ok" role="status"><b class="h">✓ Chính xác!</b>${md(it.ex)}</div>`;
+    else body += `<div class="fb no" role="status"><b class="h">✗ Chưa đúng.</b>${it.type !== "gap" && it.why && it.why[s.c] ? `<p>${md(it.why[s.c])}</p>` : ""}<p>Đáp án đúng: <em class="en">${esc(right)}</em></p><p>${md(it.ex)}</p></div>`;
+  }
+  const done = items.every((q, j) => A[j] && A[j].f !== undefined);
+  let navh = `<div class="qnav">`;
+  if (i > 0) navh += `<button class="btn" data-qj="${i - 1}">← Câu trước</button>`;
+  if (s.ok === false) navh += `<button class="btn" data-qre>↻ Thử lại câu này</button>`;
+  if (i < items.length - 1) navh += `<button class="btn ${s.ok !== undefined ? "pri" : ""}" data-qj="${i + 1}">Câu tiếp →</button>`;
+  navh += `</div>`;
+  let sum = "";
+  if (done) { const sc = score(key); const wrong = A.filter(a => a && a.f === false).length; sum = `<div class="qsum"><b>Đã làm xong: ${sc.c} / ${sc.n} câu đúng ở lần đầu.</b> ${sc.c === sc.n ? "🎉 Tuyệt vời!" : ""}${wrong ? `<div class="qnav"><button class="btn" data-qwrong>↻ Làm lại các câu sai</button></div>` : ""}<p class="mut" style="font-size:.88rem">Điểm chỉ tính lần làm đầu tiên. Bấm “Tiếp →” để sang bước sau.</p></div>`; }
+  const many = items.length > 12; const scN = score(key);
+  const head = many ? `<div style="flex:1;min-width:160px"><div class="bar"><i style="width:${scN.d / scN.n * 100}%"></i></div><span class="mut" style="font-size:.8rem">Đã làm ${scN.d}/${scN.n} · đúng ${scN.c}</span></div>` : `<div class="qdots" role="group" aria-label="Các câu hỏi">${dots}</div>`;
+  box.innerHTML = `<div class="card q"><div class="qhead">${head}<span class="mut" style="font-size:.85rem">Câu ${i + 1}/${items.length}</span></div>${body}${navh}</div>${sum}`;
+  const inp = $(".gin", box); if (inp && s.ok === undefined) inp.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); checkGap(box); } });
+}
+function answer(box, oi) {
+  const key = box.dataset.key, items = quizItems(key), A = qState(key), i = st.qi[key] || 0, it = items[i];
+  const ok = oi === it.a; const s = A[i] || {}; if (s.f === undefined) s.f = ok; s.c = oi; s.ok = ok; A[i] = s; save(); renderQuiz(box); afterAns(box, ok);
+}
+function checkGap(box) {
+  const key = box.dataset.key, items = quizItems(key), A = qState(key), i = st.qi[key] || 0, it = items[i];
+  const inp = $(".gin", box); const v = inp.value; if (!v.trim()) { inp.classList.add("shake"); setTimeout(() => inp.classList.remove("shake"), 400); return; }
+  const ok = variants(it.ans).has(norm(v)); const s = A[i] || {}; if (s.f === undefined) s.f = ok; s.c = v; s.ok = ok; A[i] = s; save(); renderQuiz(box); afterAns(box, ok);
+}
+function afterAns(box, ok) {
+  const card = $(".card", box); if (!card) return;
+  if (ok) { card.classList.add("pop"); cheer($(".opt.ok", box) || $(".gin", box)); } else { card.classList.add("shake"); }
+  updHeader();
+}
+
+/* ---------- Các màn hình ---------- */
+const SCR = [];
+const add = (id, grp, t, o) => SCR.push(Object.assign({ id, grp, t }, o));
+
+add("wel", "Bắt đầu", "Chào mừng", { mm: null, html: () => {
+  const resume = st.started && st.scr > 0 ? `<button class="btn wide" data-go="${st.lastScr || 1}">↪ Tiếp tục bài đang học</button>` : "";
+  return `<div class="cols"><div class="col"><div class="card">
+    <p class="kick">Bài tự học trước buổi học</p>
+    <h2 style="font-size:1.35rem">${esc(L.meta.titleVi)}</h2><p class="mut en">${esc(L.meta.titleEn)}</p>
+    <ul class="clean"><li>🎯 <b>Mục tiêu:</b> ${esc(L.meta.goal)}</li><li>🧳 <b>Chủ điểm từ vựng:</b> ${esc(L.meta.theme)}</li><li>⏱ <b>Thời gian:</b> khoảng ${esc(L.meta.minutes)} phút. Làm lần lượt từng bước, không giới hạn thời gian.</li></ul></div>
+    ${mini("all")}<p class="mut" style="font-size:.85rem">↑ Bảng nhỏ này luôn ở góc trên bên phải: nó cho bạn biết đang học loại câu nào.</p></div>
+    <div class="col"><div class="card"><h3>Cách học với trang này</h3>
+    <ul class="clean"><li>🔊 Chạm để nghe câu. Chạm lần nữa để dừng.</li><li><span class="vw" style="cursor:default">Từ gạch chân chấm</span> là từ vựng: chạm để xem nghĩa.</li><li>👁 “Xem nghĩa” mở bản dịch. Hãy tự đoán trước nhé!</li><li>☰ Mở danh sách các bước để quay lại bất kỳ lúc nào. Tiến độ được lưu tự động.</li></ul>
+    <label class="fld">Tên của bạn (hiện trên phiếu kết quả)<input id="nm" type="text" autocomplete="name" value="${esc(st.name)}" placeholder="Ví dụ: Trần Minh Anh"></label>
+    <div class="row" style="flex-direction:column;align-items:stretch">${resume}<button class="btn pri wide" data-go="1">Bắt đầu học →</button></div></div></div></div>`;
+}, mount: el => { const n = $("#nm", el); n.addEventListener("input", () => { st.name = n.value; save(); }); } });
+
+add("warm", "Bắt đầu", "Khởi động", { mm: "all", html: () => {
+  const [a, b] = L.compare.pair;
+  return `<div class="cols"><div class="col"><div class="card"><h3>👀 Đọc hai câu này</h3>${legend(false)}
+    ${sentCard(a.s, PT[a.pt], a.vi)}${sentCard(b.s, PT[b.pt], b.vi)}<p class="mut">Hai câu chỉ khác nhau một chút. Bạn thấy khác ở đâu?</p></div></div>
+    <div class="col"><div class="card"><h3>🤔 Suy nghĩ</h3><p>${esc(L.intro.thinkQ)}</p>
+    <button class="btn pri" data-reveal="r-main">Xem ý chính ✨</button>
+    <div id="r-main" hidden><p><b>📖 Là gì, dùng khi nào?</b> ${esc(L.intro.whatWhen)}</p><div class="gold" style="--h:220"><b>📌 Ý chính:</b> ${esc(L.intro.mainPoint)}</div></div></div></div></div>`;
+} });
+
+add("big", "Bắt đầu", "Bức tranh tổng thể", { mm: "all", html: () => `
+  <div class="cols"><div class="col"><div class="card"><h3>🗺️ Cả bài trong một bảng</h3>
+  <div class="bp"><span></span><span class="h">Vế if</span><span class="h">Vế chính</span>
+  ${L.points.map(p => `<span class="rl" style="--h:${p.hue}">${esc(p.short)}</span><span class="c" style="--h:${p.hue}">${esc(p.clause[0])}</span><span class="c" style="--h:${p.hue}">${esc(p.clause[1])}</span>`).join("")}</div>
+  <p>${L.bigNote}</p></div></div>
+  <div class="col">${L.points.map(p => `<div class="card" style="--h:${p.hue}"><h3 style="color:hsl(${p.hue} 60% var(--ptL))">${esc(p.nameVi)} <span class="mut en" style="font-weight:500">· ${esc(p.nameEn)}</span></h3>${timeline(p)}<p>${esc(p.timeline)}</p><p class="mut">❓ Tự hỏi: ${esc(p.selfQ)}</p></div>`).join("")}${symLegend}</div></div>` });
+
+const STEPS = [["obs", "Quan sát"], ["pred", "Đoán quy tắc"], ["rule", "Quy tắc"], ["anim", "Xem câu biến đổi"], ["spot", "Tìm lỗi sai"], ["prac", "Luyện tập"], ["chk", "Chốt điểm"]];
+L.points.forEach(p => {
+  const grp = `${p.nameVi} · ${p.nameEn}`;
+  add(p.id + "-obs", grp, "1 · Quan sát", { pt: p, mm: p.id, html: () => {
+    const words = L.vocab.map((v, i) => [v, i]).filter(([v]) => v.pt === p.id);
+    return `<div class="cols"><div class="col"><div class="card"><h3>👀 Nhìn phần tô nền màu ở hai vế</h3>${legend(false)}
+      ${p.examples.map(e => sentCard(e.s, p, e.vi)).join("")}</div></div>
+      <div class="col"><div class="card"><h3>📚 Từ mới trong phần này</h3><p class="mut">Chạm vào từ để xem nghĩa và nghe phát âm.</p><div class="vchips">${words.map(([v, i]) => `<button class="vchip en" data-v="${i}">${esc(v.w)}</button>`).join("")}</div></div>
+      <div class="card"><h3>💡 Gợi ý</h3><p>${L.obsHint}</p><p class="mut">Bấm “Tiếp →” khi bạn đã có câu trả lời trong đầu.</p></div></div></div>`;
+  } });
+  add(p.id + "-pred", grp, "2 · Đoán quy tắc", { pt: p, mm: p.id, html: () => {
+    const c = st.pred[p.id];
+    return `<div class="card" style="max-width:760px"><h3>🤔 ${esc(p.predict.q)}</h3><p class="mut">Chọn câu trả lời bạn nghĩ là đúng. Không sao nếu đoán sai!</p>
+      ${p.predict.opts.map((o, j) => `<button class="opt ${c !== undefined ? (j === p.predict.a ? "ok" : j === c ? "no" : "dim") : ""}" data-pred="${j}" ${c !== undefined ? "disabled" : ""}><span class="lt">${"ABC"[j]}</span><span>${esc(o)}</span></button>`).join("")}
+      ${c !== undefined ? `<div class="fb ${c === p.predict.a ? "ok" : "no"}"><b class="h">${c === p.predict.a ? "✓ Bạn đoán đúng rồi!" : "Gần đúng rồi, hãy xem lời giải thích:"}</b>${esc(p.predict.expl)}</div><button class="btn pri" data-next>Xem quy tắc →</button>` : ""}</div>`;
+  } });
+  add(p.id + "-rule", grp, "3 · Quy tắc", { pt: p, mm: p.id, html: () => `
+    <div class="cols" style="--h:${p.hue}"><div class="col"><div class="card"><h3>🧩 Công thức</h3>${p.formulas.map(([l, f]) => `<div class="fm"><span class="fl">${esc(l)}</span>${formula(f)}</div>`).join("")}
+      ${clause(p)}</div>
+      <div class="card"><h3>📖 Cách dùng</h3><ul class="clean">${p.uses.map(u => `<li>${esc(u)}</li>`).join("")}</ul></div></div>
+      <div class="col"><div class="card"><h3>⏳ Trên trục thời gian</h3>${timeline(p)}<p>${esc(p.timeline)}</p>${symLegend}</div>
+      <div class="card"><h3>🔍 Dấu hiệu nhận biết</h3><div class="chips">${p.signals.map(s => `<span class="chip en" style="color:var(--T)">${esc(s)}</span>`).join("")}</div>
+      <p class="mut" style="margin-top:.5rem">Gợi ý khác:</p><div class="chips">${p.hints.map(s => `<span class="chip" style="color:var(--mut);border-style:dashed">${esc(s)}</span>`).join("")}</div></div>
+      <div class="gold"><b>💡 Quy tắc vàng:</b> ${esc(p.golden.vi)}<p class="en" style="margin:.4rem 0 0"><b>${esc(p.golden.en)}</b> ${spk(p.golden.en)}</p></div></div></div>` });
+  add(p.id + "-anim", grp, "4 · Xem câu biến đổi", { pt: p, mm: p.id, anim: true, html: () => `
+    <div class="card" style="max-width:860px;margin-left:auto;margin-right:auto"><h3>🎬 Xem câu thay đổi từng bước</h3><p class="mut">Các phần cùng màu sẽ di chuyển. Chữ vừa đổi sẽ nhấp nháy vàng.</p>
+    <div class="stage en" id="stage" aria-live="polite"></div><div class="frd" id="frd"></div><p class="cap" id="cap"></p>
+    <div class="row"><button class="btn" data-an="prev" aria-label="Bước trước">⏮</button><button class="btn pri" data-an="play" id="anPlay" aria-label="Phát">▶ Phát</button><button class="btn" data-an="next" aria-label="Bước sau">⏭</button><button class="btn" data-an="rst" aria-label="Xem lại từ đầu">↺</button><span id="anSay"></span></div></div>`,
+    mount: el => animStart(p) });
+  add(p.id + "-spot", grp, "5 · Tìm lỗi sai", { pt: p, mm: p.id, html: () => `
+    <p>Mỗi câu dưới đây có <b>một lỗi</b>. Chạm vào từ sai.</p><div class="cols">${p.mistakes.map((m, i) => `<div class="col"><div class="card" data-spot="${p.id}-${i}">${spotHTML(p, i)}</div></div>`).join("")}</div>` });
+  add(p.id + "-prac", grp, "6 · Luyện tập", { pt: p, mm: p.id, quiz: "p-" + p.id, html: () => `<div style="max-width:820px;margin:0 auto"><p class="mut">Lần làm đầu tiên được tính điểm. Sau khi xem giải thích, bạn có thể làm lại.</p>${quizBox("p-" + p.id)}</div>` });
+  add(p.id + "-chk", grp, "7 · Chốt điểm", { pt: p, mm: p.id, html: () => {
+    const sc = score("p-" + p.id); const pc = sc.n ? sc.c / sc.n : 0; const ruleI = SCR.findIndex(s => s.id === p.id + "-rule"), pracI = SCR.findIndex(s => s.id === p.id + "-prac");
+    let msg, btns;
+    if (sc.d < sc.n) { msg = `Bạn mới làm ${sc.d}/${sc.n} câu luyện tập.`; btns = `<button class="btn pri" data-go="${pracI}">Làm tiếp phần luyện tập</button>`; }
+    else if (pc < 0.7) { msg = `Bạn đúng ${sc.c}/${sc.n} câu. Hãy xem lại quy tắc rồi làm lại các câu sai nhé.`; btns = `<button class="btn pri" data-go="${ruleI}">Ôn lại phần quy tắc</button><button class="btn" data-go="${pracI}">Về phần luyện tập</button>`; }
+    else { msg = `Bạn đúng ${sc.c}/${sc.n} câu. ${sc.c === sc.n ? "Hoàn hảo! 🎉" : "Làm tốt lắm! 👍"}`; btns = `<button class="btn pri" data-next>Tiếp tục →</button>`; }
+    return `<div class="card" style="max-width:640px;margin:0 auto;--h:${p.hue}"><h3>✅ ${esc(p.nameVi)}</h3><p style="font-size:1.6rem;font-weight:800;margin:.2rem 0">${sc.c} / ${sc.n}</p><div class="bar"><i style="width:${pc * 100}%"></i></div><p>${msg}</p>
+      <div class="gold"><b>Nhớ nhé:</b> ${esc(p.golden.vi)}</div><div class="row" style="margin-top:.7rem">${btns}</div></div>`;
+  } });
+});
+
+add("cmp", "Sau bài", "So sánh hai loại", { mm: "all", anim: true, quiz: "sort", html: () => `
+  <div class="cols"><div class="col"><div class="card"><h3>🧭 Con đường chọn loại câu</h3><p>${esc(L.compare.mainIdea)}</p><div id="tree"></div></div>
+  <div class="card"><h3>✍️ Thử phân loại</h3><p class="mut">Câu này thuộc loại nào?</p>${quizBox("sort")}</div></div>
+  <div class="col"><div class="card"><h3>🔁 Cùng một tình huống</h3><div class="tabs">${L.compare.pair.map((x, i) => `<button class="tab ${i === 0 ? "on" : ""}" style="--h:${PT[x.pt].hue}" data-pair="${i}">Câu ${"AB"[i]} · ${esc(PT[x.pt].short)}</button>`).join("")}</div>
+  <div class="stage en" id="stage"></div><p class="cap" id="cap"></p><div id="pairTl"></div><p class="mut">${esc(L.compare.close)}</p></div>
+  <div class="card">${L.points.map(p => `<div style="--h:${p.hue};margin-bottom:.6rem"><b style="color:hsl(${p.hue} 60% var(--ptL))">${esc(p.nameVi)}</b><div class="fm">${formula(p.formulas[0][1])}</div><p class="mut" style="margin:0">❓ ${esc(p.selfQ)} · ${p.signals.slice(0, 3).map(esc).join(", ")}</p></div>`).join("")}</div></div></div>`,
+  mount: el => { treeRender(0, []); pairShow(0, true); } });
+
+add("vcard", "Sau bài", "Từ vựng: thẻ ghi nhớ", { mm: null, html: () => `<div style="max-width:620px;margin:0 auto" id="fcBox"></div>`, mount: el => fcRender() });
+add("vquiz", "Sau bài", "Từ vựng: chọn nghĩa", { mm: null, quiz: "voc", html: () => `<div style="max-width:720px;margin:0 auto"><div class="row" style="justify-content:space-between"><p class="mut" style="margin:0">Chọn nghĩa tiếng Việt đúng.</p><button class="btn" data-listen aria-pressed="${st.listen}">${st.listen ? "👁 Hiện chữ" : "🎧 Chế độ nghe"}</button></div>${quizBox("voc")}</div>` });
+add("rev", "Sau bài", "Ôn tập tổng hợp", { mm: "all", quiz: "rev", html: () => `<div style="max-width:820px;margin:0 auto"><p>💡 ${esc(L.review.note)}</p>${quizBox("rev")}</div>` });
+add("sheet", "Sau bài", "Bảng tóm tắt", { mm: "all", html: () => `
+  <div class="row noprint" style="margin-bottom:.6rem"><button class="btn" data-print>🖨 In / lưu PDF</button></div>
+  <div class="cols">${L.points.map(p => `<div class="col"><div class="card" style="--h:${p.hue};border-top:5px solid hsl(${p.hue} 60% 50%)"><h3>${esc(p.nameVi)} <span class="mut en" style="font-weight:500">· ${esc(p.nameEn)}</span></h3>
+    ${p.formulas.map(([l, f]) => `<div class="fm cs-f"><span class="fl">${esc(l)}</span>${formula(f)}</div>`).join("")}
+    <p><b>Dùng khi:</b> ${esc(p.uses[0])} ${esc(p.uses[1])}</p><p><b>Dấu hiệu:</b> <span class="en">${p.signals.map(esc).join(", ")}</span></p>
+    ${sentCard(p.examples[0].s, p, p.examples[0].vi)}<div class="gold"><b>💡</b> ${esc(p.golden.vi)}</div></div></div>`).join("")}</div>` });
+add("res", "Sau bài", "Kết quả", { mm: "all", html: resHTML, mount: el => { const t = $("#notes", el); t.addEventListener("input", () => { st.notes = t.value; save(); }); const n = $("#nm2", el); n.addEventListener("input", () => { st.name = n.value; save(); }); } });
+
+/* ---------- Đoán / Tìm lỗi ---------- */
+function spotHTML(p, i) {
+  const m = p.mistakes[i], k = p.id + "-" + i, s = st.spot[k] || {}; const toks = m.wrong.split(" ");
+  const solved = s.ok;
+  let h = `<p class="mut" style="margin-top:0">Câu ${i + 1}</p><div class="en">${toks.map((t, j) => `<button class="tok ${solved && m.bad.includes(j) ? "hit" : ""}" data-tok="${j}" ${solved ? "disabled" : ""}>${esc(t)}</button>`).join("")}</div>`;
+  if (s.tries && !solved) h += `<p class="mut">Chưa phải. Gợi ý: hãy nhìn <b>động từ</b> và <b>chủ ngữ</b> / <b>từ chỉ thời gian</b>.</p>${s.tries >= 2 ? `<button class="btn" data-spotshow>Xem đáp án</button>` : ""}`;
+  if (solved) h += `<div class="fb ok"><b class="h">✓ ${s.shown ? "Đây là lỗi sai:" : "Đúng rồi!"} → <span class="fix en">${esc(m.fix)}</span></b><p class="en sent" style="font-size:1.05rem">${sent(m.right, p, false)}</p><p>${spk(m.right)}</p><p>${esc(m.why)}</p></div>`;
+  return h;
+}
+
+/* ---------- Câu biến đổi (FLIP) ---------- */
+let AN = null;
+function morph(stage, str, pt, quiet) {
+  const old = new Map(); $$(".ck", stage).forEach(e => old.set(e.dataset.k, { r: e.getBoundingClientRect(), html: e.innerHTML, el: e }));
+  const sr0 = stage.getBoundingClientRect();
+  stage.innerHTML = sent(str, pt, false);
+  if (quiet || RM || !stage.animate) return;
+  const sr = stage.getBoundingClientRect();
+  $$(".ck", stage).forEach(e => {
+    const o = old.get(e.dataset.k); const r = e.getBoundingClientRect();
+    if (o) { const dx = o.r.left - r.left, dy = o.r.top - r.top; if (dx || dy) e.animate([{ transform: `translate(${dx}px,${dy}px)` }, { transform: "none" }], { duration: 650, easing: "cubic-bezier(.2,.8,.2,1)" }); if (o.html !== e.innerHTML) e.classList.add("chg"); old.delete(e.dataset.k); }
+    else e.animate([{ opacity: 0, transform: "translateY(-14px) scale(.9)" }, { opacity: 1, transform: "none" }], { duration: 500, delay: 200, easing: "ease-out", fill: "backwards" });
+  });
+  old.forEach(o => { const c = o.el.cloneNode(true); c.style.position = "absolute"; c.style.left = (o.r.left - sr.left) + "px"; c.style.top = (o.r.top - sr.top) + "px"; c.style.margin = 0; stage.appendChild(c); const a = c.animate([{ opacity: 1 }, { opacity: 0, transform: "translateY(14px)" }], { duration: 400, fill: "forwards" }); a.onfinish = () => c.remove(); });
+}
+function animStart(p) { AN = { p, i: 0, tm: null }; animShow(true); }
+function animShow(quiet) {
+  if (!AN) return; const f = AN.p.frames[AN.i]; const stage = $("#stage"); if (!stage) return;
+  morph(stage, f.s, AN.p, quiet); $("#cap").textContent = f.cap;
+  $("#frd").innerHTML = AN.p.frames.map((x, j) => `<i class="${j === AN.i ? "on" : ""}"></i>`).join("");
+  $("#anSay").innerHTML = spk(plainS(f.s));
+}
+function animStep(d) { if (!AN) return; const n = AN.p.frames.length; AN.i = Math.max(0, Math.min(n - 1, AN.i + d)); animShow(); }
+function animPlay() {
+  if (!AN) return; const b = $("#anPlay");
+  if (AN.tm) { clearInterval(AN.tm); AN.tm = null; if (b) b.textContent = "▶ Phát"; return; }
+  if (AN.i >= AN.p.frames.length - 1) { AN.i = 0; animShow(); }
+  if (b) b.textContent = "⏸ Dừng";
+  AN.tm = setInterval(() => { if (AN.i >= AN.p.frames.length - 1) { animPlay(); return; } animStep(1); }, 2800);
+}
+function animStop() { if (AN && AN.tm) clearInterval(AN.tm); AN = null; }
+
+/* ---------- So sánh ---------- */
+let pairI = 0;
+function pairShow(i, quiet) {
+  pairI = i; const x = L.compare.pair[i], p = PT[x.pt]; const stage = $("#stage"); if (!stage) return;
+  morph(stage, x.s, p, quiet); $("#cap").innerHTML = `${esc(x.vi)} ${spk(plainS(x.s))}`;
+  $("#pairTl").innerHTML = timeline(p);
+  $$("[data-pair]").forEach((b, j) => b.classList.toggle("on", j === i));
+}
+function treeRender(step, path) {
+  const T = L.compare.tree; let h = "";
+  path.forEach((a, j) => { h += `<div class="dq"><b>${j + 1}. ${esc(T[j].q)}</b><p style="margin:.2rem 0 0">→ ${a ? "Có" : "Không"}</p></div>`; });
+  const last = path[path.length - 1];
+  if (path.length && last === true) { const p = PT[T[path.length - 1].yes]; h += `<div class="dres" style="--h:${p.hue}"><b>➜ ${esc(p.nameVi)}</b><div class="fm">${formula(p.formulas[0][1])}</div></div><button class="btn" data-tree="reset">↺ Thử lại</button>`; }
+  else if (path.length >= T.length) h += `<div class="dq"><b>➜ ${esc(L.compare.other)}</b></div><button class="btn" data-tree="reset">↺ Thử lại</button>`;
+  else h += `<div class="dq"><b>${path.length + 1}. ${esc(T[path.length].q)}</b><div class="row" style="margin-top:.4rem"><button class="btn pri" data-tree="yes">Có</button><button class="btn" data-tree="no">Không</button></div></div>`;
+  const el = $("#tree"); if (el) { el.innerHTML = h; el.dataset.path = JSON.stringify(path); }
+}
+
+/* ---------- Thẻ từ vựng ---------- */
+let FC = { i: 0, only: false, flip: false };
+function fcList() { return L.vocab.map((v, i) => i).filter(i => !FC.only || !st.known[i]); }
+function fcRender() {
+  const box = $("#fcBox"); if (!box) return; const list = fcList(); const kn = Object.keys(st.known).filter(k => st.known[k]).length;
+  if (!list.length) { box.innerHTML = `<div class="card"><h3>🎉 Bạn đã nhớ hết các từ!</h3><button class="btn" data-fc="all">Xem lại tất cả</button></div>`; return; }
+  if (FC.i >= list.length) FC.i = 0; const vi = list[FC.i], v = L.vocab[vi];
+  box.innerHTML = `<div class="row" style="justify-content:space-between"><span class="mut">Thẻ ${FC.i + 1}/${list.length} · <span class="kn">Đã nhớ ${kn}/${L.vocab.length}</span></span>
+    <div class="seg" style="min-width:220px"><button class="${FC.only ? "" : "on"}" data-fc="all">Tất cả</button><button class="${FC.only ? "on" : ""}" data-fc="only">Chưa nhớ</button></div></div>
+    <div class="bar" style="margin:.5rem 0"><i style="width:${kn / L.vocab.length * 100}%"></i></div>
+    <div class="fcard ${FC.flip ? "flip" : ""}" id="fcard"><div class="fin">
+      <div class="face" role="button" tabindex="0" data-fc="flip" aria-label="Lật thẻ"><div class="fw en">${esc(v.w)}</div><div class="fpos">${esc(v.pos)}</div><div class="fipa">${esc(v.ipa)}</div><div style="margin-top:.6rem">${spk(v.w)}</div><p class="mut" style="font-size:.85rem;margin-top:.8rem">Chạm vào thẻ để xem nghĩa</p></div>
+      <div class="face back" role="button" tabindex="0" data-fc="flip" aria-label="Lật thẻ"><div class="fvi">${esc(v.vi)}</div><p class="en" style="font-size:1.05rem">${autolink(v.ex)}</p><div>${spk(v.ex)}</div></div>
+    </div></div>
+    <div class="row" style="margin-top:.6rem"><button class="btn" data-fc="prev" aria-label="Thẻ trước">←</button><button class="btn" style="flex:1" data-fc="no">🤔 Chưa nhớ</button><button class="btn pri" style="flex:1" data-fc="yes">✓ Đã nhớ</button><button class="btn" data-fc="next" aria-label="Thẻ sau">→</button></div>`;
+}
+
+/* ---------- Kết quả ---------- */
+function sections() {
+  return [...L.points.map(p => ({ t: "Luyện tập: " + p.nameVi, k: "p-" + p.id, s: SCR.findIndex(x => x.id === p.id + "-prac"), pt: p })),
+    { t: "Phân loại câu", k: "sort", s: SCR.findIndex(x => x.id === "cmp") }, { t: "Từ vựng", k: "voc", s: SCR.findIndex(x => x.id === "vquiz") }, { t: "Ôn tập tổng hợp", k: "rev", s: SCR.findIndex(x => x.id === "rev") }];
+}
+function fmtT(s) { const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60; return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0"); }
+function resHTML() {
+  const se = sections().map(x => Object.assign(x, score(x.k)));
+  const tc = se.reduce((a, x) => a + x.c, 0), tn = se.reduce((a, x) => a + x.n, 0);
+  const done = se.filter(x => x.d > 0); const pc = x => x.n ? x.c / x.n : 0;
+  const best = done.slice().sort((a, b) => pc(b) - pc(a))[0], worst = done.slice().sort((a, b) => pc(a) - pc(b))[0];
+  const wrong = se.some(x => (st.ans[x.k] || []).some(a => a && a.f === false));
+  const date = new Date().toLocaleDateString("vi-VN");
+  return `<div class="rc"><div class="card" id="rcard"><p class="kick">Phiếu kết quả · ${esc(date)}</p><h2 style="margin:.1rem 0">${esc(st.name || "(chưa có tên)")}</h2><p class="mut" style="margin:0 0 .4rem">${esc(L.meta.titleVi)}</p>
+    <table class="rt">${se.map(x => `<tr><td>${esc(x.t)}</td><td>${x.d ? `${x.c}/${x.n}` : "–"}${x.d && x.d < x.n ? ` <span class="mut">(làm ${x.d})</span>` : ""}</td></tr>`).join("")}
+    <tr><td><b>Tổng</b> · ⏱ ${fmtT(st.time)}</td><td>${tc}/${tn}</td></tr></table>
+    <p style="margin:.5rem 0 .2rem">💪 Tốt nhất: <b>${best ? esc(best.t) : "–"}</b><br>📌 Cần ôn: <b>${worst && worst !== best ? esc(worst.t) : "–"}</b></p>
+    <label class="fld" style="margin-bottom:.2rem">🙋 Điều mình còn thắc mắc (để hỏi trên lớp)</label><textarea id="notes" placeholder="${esc(L.meta.notesHint)}">${esc(st.notes)}</textarea></div>
+    <div class="noprint"><label class="fld">Tên của bạn<input id="nm2" type="text" value="${esc(st.name)}"></label>
+    <p class="mut" style="font-size:.88rem">📸 Chụp màn hình phiếu này và gửi cho giáo viên trước buổi học.</p>
+    <div class="row">${wrong ? `<button class="btn pri" data-redo>↻ Làm lại câu sai</button>` : ""}${worst && pc(worst) < 1 ? `<button class="btn" data-go="${worst.pt ? SCR.findIndex(x => x.id === worst.pt.id + "-rule") : worst.s}">Ôn lại: ${esc(worst.pt ? worst.pt.nameVi : worst.t)}</button>` : ""}<button class="btn" data-print>🖨 In</button></div></div></div>`;
+}
+
+/* ---------- Điều hướng ---------- */
+const main = $("#main");
+function quizDone(k) { const s = score(k); return s.n > 0 && s.d === s.n; }
+function stepDone(s) { return s.quiz ? quizDone(s.quiz) : !!st.seen[s.id]; }
+function updHeader() {
+  const s = SCR[st.scr]; $("#hTitle").textContent = L.meta.short;
+  $("#hStep").textContent = `Bước ${st.scr + 1}/${SCR.length} · ${s.t}`;
+  $("#prog i").style.width = ((st.scr + 1) / SCR.length * 100) + "%";
+  $("#bPrev").disabled = st.scr === 0; $("#bNext").textContent = st.scr === SCR.length - 1 ? "Về đầu ↺" : "Tiếp →";
+}
+function go(i) {
+  if (ERR.length) { main.innerHTML = `<div class="err"><h2>⚠️ Dữ liệu bài học có lỗi</h2><ul>${ERR.map(e => `<li>${esc(e)}</li>`).join("")}</ul></div>`; return; }
+  i = Math.max(0, Math.min(SCR.length - 1, i)); animStop(); stopSay(); closeSheet();
+  st.scr = i; if (i > 0) { st.started = true; st.lastScr = i; } st.seen[SCR[i].id] = 1; const s = SCR[i];
+  const head = s.id === "wel" ? "" : `<div class="trow"><div><p class="kick">${esc(s.grp)}</p><h1>${esc(s.t)}</h1></div>${s.mm !== null ? mini(s.mm) : ""}</div>`;
+  main.innerHTML = `<section class="screen" data-id="${s.id}">${head}${s.html(s)}</section>`;
+  $$(".quiz", main).forEach(renderQuiz);
+  if (s.mount) s.mount(main.firstElementChild, s);
+  main.scrollTop = 0; updHeader(); save();
+  try { main.focus({ preventScroll: true }); } catch (e) {}
+}
+const next = () => go(st.scr === SCR.length - 1 ? 0 : st.scr + 1);
+$("#bNext").onclick = next; $("#bPrev").onclick = () => go(st.scr - 1);
+
+/* ---------- Menu & cài đặt ---------- */
+function openMenu() {
+  let h = `<div class="row" style="justify-content:space-between"><b>Các bước</b><button class="ib" data-close aria-label="Đóng">✕</button></div>`, g = "";
+  SCR.forEach((s, i) => { if (s.grp !== g) { g = s.grp; h += `<p class="dg">${esc(g)}</p>`; } h += `<button class="di ${i === st.scr ? "cur" : ""}" data-go="${i}"><span class="ck2">${stepDone(s) ? "✔" : ""}</span>${esc(s.t)}</button>`; });
+  $("#drawer").innerHTML = h; $("#ovMenu").hidden = false; const c = $(".di.cur", $("#drawer")); if (c) c.scrollIntoView({ block: "center" });
+}
+function applySet() {
+  document.documentElement.style.setProperty("--scale", st.set.scale);
+  if (st.set.theme === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", st.set.theme);
+}
+function openSet() {
+  const S = st.set;
+  $("#setp").innerHTML = `<div class="row" style="justify-content:space-between"><b>⚙︎ Cài đặt</b><button class="ib" data-close aria-label="Đóng">✕</button></div>
+    <label>Cỡ chữ</label><div class="seg"><button data-set="scale-">A−</button><button disabled>${Math.round(S.scale * 100)}%</button><button data-set="scale+">A+</button></div>
+    <label>Giao diện</label><div class="seg">${[["auto", "Tự động"], ["light", "Sáng"], ["dark", "Tối"]].map(([k, t]) => `<button class="${S.theme === k ? "on" : ""}" data-set="theme:${k}">${t}</button>`).join("")}</div>
+    <label for="sv">Giọng đọc</label><select id="sv"><option value="en-GB" ${S.voice === "en-GB" ? "selected" : ""}>🇬🇧 Giọng Anh</option><option value="en-US" ${S.voice === "en-US" ? "selected" : ""}>🇺🇸 Giọng Mỹ</option></select>
+    <label>Tốc độ đọc</label><div class="seg"><button class="${S.rate === 1 ? "on" : ""}" data-set="rate:1">Thường</button><button class="${S.rate !== 1 ? "on" : ""}" data-set="rate:0.7">Chậm</button></div>
+    <label>Tiến độ</label><button class="btn wide" data-set="reset">↺ Học lại từ đầu (xóa điểm)</button>`;
+  $("#sv").onchange = e => { st.set.voice = e.target.value; save(); };
+  $("#ovSet").hidden = false;
+}
+$("#bMenu").onclick = openMenu; $("#bSet").onclick = openSet;
+
+/* ---------- Bảng nghĩa từ vựng ---------- */
+function openSheet(i) {
+  const v = L.vocab[i]; if (!v) return; const sh = $("#sheet");
+  sh.innerHTML = `<div class="row" style="justify-content:space-between;align-items:flex-start"><div><b class="en" style="font-size:1.25rem">${esc(v.w)}</b> <i class="mut">${esc(v.pos)}</i> <span class="mut">${esc(v.ipa)}</span></div><button class="ib" data-close aria-label="Đóng">✕</button></div>
+    <p style="font-size:1.1rem;font-weight:700;margin:.2rem 0">${esc(v.vi)} ${spk(v.w)}</p><p class="en mut" style="margin:.3rem 0">${esc(v.ex)} ${spk(v.ex)}</p>`;
+  sh.hidden = false;
+}
+function closeSheet() { $("#sheet").hidden = true; }
+
+/* ---------- Xử lý chạm / bấm ---------- */
+document.addEventListener("click", e => {
+  const t = e.target.closest("button,[data-v],[role=button]");
+  if (!$("#sheet").hidden && !e.target.closest("#sheet") && !(t && t.dataset.v !== undefined)) closeSheet();
+  if (!t) { if (e.target.classList && e.target.classList.contains("ov")) e.target.hidden = true; return; }
+  const d = t.dataset;
+  if (d.close !== undefined) { const ov = t.closest(".ov"); if (ov) ov.hidden = true; else closeSheet(); return; }
+  if (d.say !== undefined) { say(d.say, t); return; }
+  if (d.v !== undefined) { openSheet(+d.v); return; }
+  if (d.go !== undefined) { $("#ovMenu").hidden = true; go(+d.go); return; }
+  if (d.next !== undefined) { next(); return; }
+  if (d.vi !== undefined) { const p = t.parentElement.querySelector(".vi"); p.hidden = !p.hidden; t.textContent = p.hidden ? "👁 Xem nghĩa" : "🙈 Ẩn nghĩa"; t.setAttribute("aria-expanded", !p.hidden); return; }
+  if (d.reveal !== undefined) { const r = document.getElementById(d.reveal); r.hidden = false; t.remove(); r.animate && !RM && r.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 400 }); return; }
+  if (d.pred !== undefined) { const p = SCR[st.scr].pt; st.pred[p.id] = +d.pred; save(); go(st.scr); if (+d.pred === p.predict.a) cheer($(".opt.ok")); return; }
+  if (d.tok !== undefined) {
+    const card = t.closest("[data-spot]"); const [pid, mi] = card.dataset.spot.split("-"); const p = PT[pid], m = p.mistakes[+mi]; const k = card.dataset.spot; const s = st.spot[k] = st.spot[k] || { tries: 0 };
+    if (m.bad.includes(+d.tok)) { s.ok = true; save(); card.innerHTML = spotHTML(p, +mi); cheer($(".tok.hit", card)); }
+    else { s.tries++; save(); card.innerHTML = spotHTML(p, +mi); const b = $(`[data-tok="${d.tok}"]`, card); if (b) b.classList.add("miss"); }
+    return;
+  }
+  if (d.spotshow !== undefined) { const card = t.closest("[data-spot]"); const [pid, mi] = card.dataset.spot.split("-"); st.spot[card.dataset.spot] = { ok: true, shown: true, tries: 2 }; save(); card.innerHTML = spotHTML(PT[pid], +mi); return; }
+  if (d.an) { ({ prev: () => animStep(-1), next: () => animStep(1), play: animPlay, rst: () => { if (AN) { if (AN.tm) animPlay(); AN.i = 0; animShow(); } } })[d.an](); return; }
+  if (d.pair !== undefined) { pairShow(+d.pair); return; }
+  if (d.tree) { const el = $("#tree"); const path = JSON.parse(el.dataset.path || "[]"); if (d.tree === "reset") treeRender(0, []); else { path.push(d.tree === "yes"); treeRender(path.length, path); } return; }
+  const qb = t.closest(".quiz");
+  if (qb) {
+    if (d.qo !== undefined) { answer(qb, +d.qo); return; }
+    if (d.qchk !== undefined) { checkGap(qb); return; }
+    if (d.qj !== undefined) { st.qi[qb.dataset.key] = +d.qj; save(); renderQuiz(qb); return; }
+    if (d.qre !== undefined) { const A = qState(qb.dataset.key), i = st.qi[qb.dataset.key] || 0; if (A[i]) { delete A[i].c; delete A[i].ok; } save(); renderQuiz(qb); return; }
+    if (d.qwrong !== undefined) { const A = qState(qb.dataset.key); let first = -1; A.forEach((a, j) => { if (a && a.f === false) { delete a.c; delete a.ok; if (first < 0) first = j; } }); st.qi[qb.dataset.key] = Math.max(0, first); save(); renderQuiz(qb); return; }
+  }
+  if (d.listen !== undefined) { st.listen = !st.listen; save(); go(st.scr); return; }
+  if (d.fc) {
+    const list = fcList(), vi = list[FC.i];
+    if (d.fc === "flip") { FC.flip = !FC.flip; $("#fcard").classList.toggle("flip", FC.flip); return; }
+    if (d.fc === "all" || d.fc === "only") { FC.only = d.fc === "only"; FC.i = 0; FC.flip = false; }
+    if (d.fc === "prev") { FC.i = (FC.i - 1 + list.length) % list.length; FC.flip = false; }
+    if (d.fc === "next") { FC.i = (FC.i + 1) % list.length; FC.flip = false; }
+    if (d.fc === "yes" || d.fc === "no") { st.known[vi] = d.fc === "yes"; save(); if (!(FC.only && d.fc === "yes")) FC.i = (FC.i + 1) % Math.max(1, list.length); FC.flip = false; }
+    fcRender(); return;
+  }
+  if (d.print !== undefined) { window.print(); return; }
+  if (d.redo !== undefined) { let target = -1; sections().forEach(x => { const A = st.ans[x.k] || []; let first = -1; A.forEach((a, j) => { if (a && a.f === false) { delete a.c; delete a.ok; if (first < 0) first = j; } }); if (first >= 0) { st.qi[x.k] = first; if (target < 0) target = x.s; } }); save(); if (target >= 0) { toast("Các câu sai đã được mở lại. Làm lại nhé!"); go(target); } return; }
+  if (d.set) {
+    const v = d.set;
+    if (v === "scale-") st.set.scale = Math.max(.85, +(st.set.scale - .1).toFixed(2));
+    else if (v === "scale+") st.set.scale = Math.min(1.45, +(st.set.scale + .1).toFixed(2));
+    else if (v.startsWith("theme:")) st.set.theme = v.slice(6);
+    else if (v.startsWith("rate:")) st.set.rate = +v.slice(5);
+    else if (v === "reset") { if (!confirm("Xóa toàn bộ điểm và tiến độ để học lại từ đầu?")) return; const keep = { set: st.set, name: st.name }; st = Object.assign(blank(), keep); save(); $("#ovSet").hidden = true; applySet(); go(0); return; }
+    save(); applySet(); openSet(); return;
+  }
+});
+document.addEventListener("keydown", e => {
+  const tg = e.target; const typing = tg && (tg.tagName === "INPUT" || tg.tagName === "TEXTAREA" || tg.tagName === "SELECT");
+  if (e.key === "Escape") { $("#ovMenu").hidden = true; $("#ovSet").hidden = true; closeSheet(); return; }
+  if (typing) return;
+  if ((e.key === "Enter" || e.key === " ") && tg && tg.getAttribute && tg.getAttribute("role") === "button") { e.preventDefault(); tg.click(); return; }
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
+  if (e.key === "ArrowRight") { next(); e.preventDefault(); }
+  else if (e.key === "ArrowLeft") { go(st.scr - 1); e.preventDefault(); }
+  else if (/^[1-4]$/.test(e.key)) { const opts = $$(".quiz .opt:not([disabled]), [data-pred]:not([disabled])", main); const b = opts[+e.key - 1]; if (b) b.click(); }
+  else if (e.key === " " && AN) { e.preventDefault(); animPlay(); }
+});
+
+/* ---------- Đồng hồ (chỉ đếm khi trang đang hiển thị) ---------- */
+setInterval(() => { if (document.visibilityState === "visible" && st.started) { st.time++; $("#hTime").textContent = "⏱ " + fmtT(st.time); if (st.time % 10 === 0) save(); } }, 1000);
+document.addEventListener("visibilitychange", () => { if (document.visibilityState !== "visible") { save(); stopSay(); } });
+let rT; window.addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => { if (AN) animShow(true); else if ($("#pairTl")) pairShow(pairI, true); }, 200); });
+
+/* ---------- Khởi động ---------- */
+applySet();
+$("#hTime").textContent = "⏱ " + fmtT(st.time);
+go(st.scr || 0);
+</script>
+</body>
+</html>
